@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoginAlertController : UIView
+@interface LoginAlertView : UIView
 
 /** 弹窗主内容view */
 @property (nonatomic,strong) UIView   *contentView;

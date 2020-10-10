@@ -6,20 +6,20 @@
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
-#import "LoginAlertController.h"
+#import "LoginAlertView.h"
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 #import <Masonry/Masonry.h>
 #import "TabBarController.h"
 
 
-@interface LoginAlertController ()<UITextViewDelegate>
+@interface LoginAlertView ()<UITextViewDelegate>
 @property (nonatomic, strong) UIImageView *githubIconImage;
 @property (nonatomic, strong) UITextView  *titleTextView;
 @end
 
 
-@implementation LoginAlertController
+@implementation LoginAlertView
 
 - (instancetype)init{
     if (self = [super init]) {
@@ -189,19 +189,5 @@
     //期望弹出新的视图后原先的登录视图消失。
 }
 
-#pragma mark -- show
-
-- (void)show {
-    // 出场动画
-    self.alpha = 0;
-    self.contentView.transform = CGAffineTransformScale(self.contentView.transform, 1.3, 1.3);
-    [UIView animateWithDuration:0.2 animations:^{
-        self.alpha = 1;
-        self.contentView.transform = CGAffineTransformIdentity;
-    }];
-    
-    UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
-    [window addSubview:self];
-}
 
 @end

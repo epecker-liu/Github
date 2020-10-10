@@ -7,7 +7,7 @@
 //
 #import <Masonry/Masonry.h>
 #import "LoginViewController.h"
-#import "LoginAlertController.h"
+#import "LoginAlertView.h"
 #import "TabBarController.h"
 
 #define MAS_SHORTHAND
@@ -118,9 +118,14 @@
 #pragma mark -button event
 
 - (void) login{
-    
-    LoginAlertController *vc = [[LoginAlertController alloc] init];
-    [vc show];
+    LoginAlertView *vc = [[LoginAlertView alloc] init];
+    vc.alpha = 1;
+    vc.contentView.transform = CGAffineTransformScale(vc.contentView.transform, 2, 2);
+    [UIView animateWithDuration:0.5 animations:^{
+        vc.alpha = 1;
+        vc.contentView.transform = CGAffineTransformIdentity;
+    }];
+    [self.view addSubview:vc];
 }
 
 @end

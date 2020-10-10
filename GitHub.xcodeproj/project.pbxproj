@@ -16,12 +16,12 @@
 		2BEB9D45252850810022A2A6 /* GitHubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D44252850810022A2A6 /* GitHubTests.m */; };
 		2BEB9D50252850820022A2A6 /* GitHubUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D4F252850820022A2A6 /* GitHubUITests.m */; };
 		2BEB9D60252851410022A2A6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D5F252851410022A2A6 /* LoginViewController.m */; };
-		2BEB9D6B2528EFB20022A2A6 /* LoginAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D6A2528EFB20022A2A6 /* LoginAlertController.m */; };
 		2BEB9D7825302E300022A2A6 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D7725302E300022A2A6 /* TabBarController.m */; };
 		2BEB9D7C253040980022A2A6 /* HomePagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D7B253040980022A2A6 /* HomePagerViewController.m */; };
 		2BEB9D80253045280022A2A6 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D7F253045280022A2A6 /* NotificationViewController.m */; };
 		2BEB9D872530462D0022A2A6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D862530462D0022A2A6 /* SearchViewController.m */; };
 		2BEB9D93253073E30022A2A6 /* MyWorkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D92253073E30022A2A6 /* MyWorkData.m */; };
+		2BEB9D992531C3470022A2A6 /* loginAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D982531C3470022A2A6 /* loginAlertView.m */; };
 		B04BDFCAE82A484DB7AE5C96 /* Pods_GitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB2450EA8A52D4F6A19CA6D /* Pods_GitHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +62,6 @@
 		2BEB9D51252850820022A2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BEB9D5E252851410022A2A6 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2BEB9D5F252851410022A2A6 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		2BEB9D692528EFB20022A2A6 /* LoginAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginAlertController.h; sourceTree = "<group>"; };
-		2BEB9D6A2528EFB20022A2A6 /* LoginAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginAlertController.m; sourceTree = "<group>"; };
 		2BEB9D7625302E300022A2A6 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		2BEB9D7725302E300022A2A6 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		2BEB9D7A253040980022A2A6 /* HomePagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePagerViewController.h; sourceTree = "<group>"; };
@@ -74,6 +72,8 @@
 		2BEB9D862530462D0022A2A6 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		2BEB9D91253073E30022A2A6 /* MyWorkData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWorkData.h; sourceTree = "<group>"; };
 		2BEB9D92253073E30022A2A6 /* MyWorkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWorkData.m; sourceTree = "<group>"; };
+		2BEB9D972531C3470022A2A6 /* loginAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loginAlertView.h; sourceTree = "<group>"; };
+		2BEB9D982531C3470022A2A6 /* loginAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginAlertView.m; sourceTree = "<group>"; };
 		71A342FF9FE2E42FF0CA4235 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
 		8F31CDBA890AEF4FC4350AA9 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +112,7 @@
 				2BEB9D7D253044DF0022A2A6 /* NotificationViewController */,
 				2BEB9D79253040530022A2A6 /* HomePager */,
 				2BEB9D6C25302C5A0022A2A6 /* TabBar */,
-				2BEB9D652528E32F0022A2A6 /* loginAlertController */,
+				2BEB9D652528E32F0022A2A6 /* loginAlertView */,
 				2BEB9D5D252850FF0022A2A6 /* Login_display */,
 				2BEB9D272528507F0022A2A6 /* GitHub */,
 				2BEB9D43252850810022A2A6 /* GitHubTests */,
@@ -176,13 +176,13 @@
 			path = Login_display;
 			sourceTree = "<group>";
 		};
-		2BEB9D652528E32F0022A2A6 /* loginAlertController */ = {
+		2BEB9D652528E32F0022A2A6 /* loginAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9D692528EFB20022A2A6 /* LoginAlertController.h */,
-				2BEB9D6A2528EFB20022A2A6 /* LoginAlertController.m */,
+				2BEB9D972531C3470022A2A6 /* loginAlertView.h */,
+				2BEB9D982531C3470022A2A6 /* loginAlertView.m */,
 			);
-			path = loginAlertController;
+			path = loginAlertView;
 			sourceTree = "<group>";
 		};
 		2BEB9D6C25302C5A0022A2A6 /* TabBar */ = {
@@ -423,8 +423,8 @@
 			files = (
 				2BEB9D2A2528507F0022A2A6 /* AppDelegate.m in Sources */,
 				2BEB9D3B252850810022A2A6 /* main.m in Sources */,
+				2BEB9D992531C3470022A2A6 /* loginAlertView.m in Sources */,
 				2BEB9D93253073E30022A2A6 /* MyWorkData.m in Sources */,
-				2BEB9D6B2528EFB20022A2A6 /* LoginAlertController.m in Sources */,
 				2BEB9D7825302E300022A2A6 /* TabBarController.m in Sources */,
 				2BEB9D872530462D0022A2A6 /* SearchViewController.m in Sources */,
 				2BEB9D2D2528507F0022A2A6 /* SceneDelegate.m in Sources */,
