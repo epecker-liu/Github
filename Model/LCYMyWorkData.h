@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *workName;
 @property(nonatomic, strong) UIImage *workImage;
 
-- (LCYMyWorkData *)initWithWorkName: (NSString *)workName WorkImage:(UIImage *)workImage;
+- (instancetype)initWithWorkName: (NSString *)workName WorkImage:(UIImage *)workImage;
 
 @end
 

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C94FEDA2A6D7C2256A1AAC /* libPods-GitHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1513856F10589417BCFC80 /* libPods-GitHub.a */; };
 		2BEB9D2A2528507F0022A2A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D292528507F0022A2A6 /* AppDelegate.m */; };
 		2BEB9D2D2528507F0022A2A6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D2C2528507F0022A2A6 /* SceneDelegate.m */; };
 		2BEB9D332528507F0022A2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB9D312528507F0022A2A6 /* Main.storyboard */; };
@@ -23,7 +24,8 @@
 		2BEB9D93253073E30022A2A6 /* LCYMyWorkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D92253073E30022A2A6 /* LCYMyWorkData.m */; };
 		2BEB9D992531C3470022A2A6 /* LCYLoginAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D982531C3470022A2A6 /* LCYLoginAlertView.m */; };
 		2BEB9DE52533F7210022A2A6 /* LCYFetchNetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DE42533F7210022A2A6 /* LCYFetchNetData.m */; };
-		B04BDFCAE82A484DB7AE5C96 /* Pods_GitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB2450EA8A52D4F6A19CA6D /* Pods_GitHub.framework */; };
+		2BEB9DEA2534850D0022A2A6 /* LCYRepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DE92534850D0022A2A6 /* LCYRepModel.m */; };
+		2BEB9DED253485C10022A2A6 /* LCYOwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DEC253485C10022A2A6 /* LCYOwnerModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DB2450EA8A52D4F6A19CA6D /* Pods_GitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB9D252528507F0022A2A6 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB9D282528507F0022A2A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BEB9D292528507F0022A2A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,8 +78,13 @@
 		2BEB9D982531C3470022A2A6 /* LCYLoginAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYLoginAlertView.m; sourceTree = "<group>"; };
 		2BEB9DE32533F7210022A2A6 /* LCYFetchNetData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYFetchNetData.h; sourceTree = "<group>"; };
 		2BEB9DE42533F7210022A2A6 /* LCYFetchNetData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYFetchNetData.m; sourceTree = "<group>"; };
+		2BEB9DE82534850D0022A2A6 /* LCYRepModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYRepModel.h; sourceTree = "<group>"; };
+		2BEB9DE92534850D0022A2A6 /* LCYRepModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepModel.m; sourceTree = "<group>"; };
+		2BEB9DEB253485C10022A2A6 /* LCYOwnerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYOwnerModel.h; sourceTree = "<group>"; };
+		2BEB9DEC253485C10022A2A6 /* LCYOwnerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYOwnerModel.m; sourceTree = "<group>"; };
 		71A342FF9FE2E42FF0CA4235 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
 		8F31CDBA890AEF4FC4350AA9 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
+		DA1513856F10589417BCFC80 /* libPods-GitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04BDFCAE82A484DB7AE5C96 /* Pods_GitHub.framework in Frameworks */,
+				05C94FEDA2A6D7C2256A1AAC /* libPods-GitHub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +236,10 @@
 			children = (
 				2BEB9D91253073E30022A2A6 /* LCYMyWorkData.h */,
 				2BEB9D92253073E30022A2A6 /* LCYMyWorkData.m */,
+				2BEB9DE82534850D0022A2A6 /* LCYRepModel.h */,
+				2BEB9DE92534850D0022A2A6 /* LCYRepModel.m */,
+				2BEB9DEB253485C10022A2A6 /* LCYOwnerModel.h */,
+				2BEB9DEC253485C10022A2A6 /* LCYOwnerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,7 +256,7 @@
 		473E2CCD5DB5FA65213E43EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0DB2450EA8A52D4F6A19CA6D /* Pods_GitHub.framework */,
+				DA1513856F10589417BCFC80 /* libPods-GitHub.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,7 +281,6 @@
 				2BEB9D212528507F0022A2A6 /* Sources */,
 				2BEB9D222528507F0022A2A6 /* Frameworks */,
 				2BEB9D232528507F0022A2A6 /* Resources */,
-				CFCAB8A1AD4CFE4F68419382 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,23 +419,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CFCAB8A1AD4CFE4F68419382 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitHub/Pods-GitHub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitHub/Pods-GitHub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub/Pods-GitHub-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -442,8 +434,10 @@
 				2BEB9D872530462D0022A2A6 /* LCYSearchViewController.m in Sources */,
 				2BEB9DE52533F7210022A2A6 /* LCYFetchNetData.m in Sources */,
 				2BEB9D2D2528507F0022A2A6 /* SceneDelegate.m in Sources */,
+				2BEB9DEA2534850D0022A2A6 /* LCYRepModel.m in Sources */,
 				2BEB9D80253045280022A2A6 /* LCYNotificationViewController.m in Sources */,
 				2BEB9D7C253040980022A2A6 /* LCYHomePagerViewController.m in Sources */,
+				2BEB9DED253485C10022A2A6 /* LCYOwnerModel.m in Sources */,
 				2BEB9D60252851410022A2A6 /* LCYLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

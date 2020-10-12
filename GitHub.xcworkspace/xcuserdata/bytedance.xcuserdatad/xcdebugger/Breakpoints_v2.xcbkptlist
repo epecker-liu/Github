@@ -292,5 +292,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28D58B9E-B54A-4D9E-B495-F5AE367646EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FetchNetData/LCYFetchNetData.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-getData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "566B66AA-CC13-4D51-9BD0-41E4F28EDC8B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FetchNetData/LCYFetchNetData.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-getData"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "566B66AA-CC13-4D51-9BD0-41E4F28EDC8B - 66bfa2b511f680f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LCYFetchNetData getData]"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/FetchNetData/LCYFetchNetData.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "566B66AA-CC13-4D51-9BD0-41E4F28EDC8B - e5002a1972047c66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__26-[LCYFetchNetData getData]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/FetchNetData/LCYFetchNetData.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "82">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27C87E30-7EB0-4E07-BEF9-61A71F76C2A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FetchNetData/LCYFetchNetData.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-getData"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "27C87E30-7EB0-4E07-BEF9-61A71F76C2A4 - e5002a1972047c66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__26-[LCYFetchNetData getData]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/FetchNetData/LCYFetchNetData.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  uuid = "27C87E30-7EB0-4E07-BEF9-61A71F76C2A4 - e0754516e93b42d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__26-[LCYFetchNetData getData]_block_invoke_2"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/FetchNetData/LCYFetchNetData.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "71">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

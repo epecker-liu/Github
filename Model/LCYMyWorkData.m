@@ -10,7 +10,7 @@
 
 @implementation LCYMyWorkData
 
-- (LCYMyWorkData *)initWithWorkName:(NSString *)workName WorkImage:(UIImage *)workImage
+- (instancetype)initWithWorkName:(NSString *)workName WorkImage:(UIImage *)workImage
 {
     if (self = [super init]) {
         self.workName = workName;
