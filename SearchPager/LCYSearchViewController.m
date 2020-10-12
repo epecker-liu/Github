@@ -6,13 +6,13 @@
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "LCYSearchViewController.h"
 
-@interface SearchViewController ()
+@interface LCYSearchViewController ()
 
 @end
 
-@implementation SearchViewController
+@implementation LCYSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

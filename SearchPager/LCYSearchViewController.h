@@ -1,5 +1,5 @@
 //
-//  NotificationViewController.h
+//  SearchViewController.h
 //  GitHub
 //
 //  Created by bytedance on 2020/10/9.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NotificationViewController : UIViewController
+@interface LCYSearchViewController : UIViewController
 
 @end
 

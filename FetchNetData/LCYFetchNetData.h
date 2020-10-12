@@ -1,8 +1,8 @@
 //
-//  HomePagerViewController.h
+//  fetchNetData.h
 //  GitHub
 //
-//  Created by bytedance on 2020/10/9.
+//  Created by bytedance on 2020/10/12.
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomePagerViewController : UIViewController
+@interface LCYFetchNetData : NSObject
+
+- (void)getData;
 
 @end
 

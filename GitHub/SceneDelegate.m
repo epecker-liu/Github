@@ -7,7 +7,7 @@
 //
 
 #import "SceneDelegate.h"
-#import "LoginViewController.h"
+#import "LCYLoginViewController.h"
 
 @interface SceneDelegate ()
 
@@ -22,7 +22,7 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     //self.window = [[UIWindow alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
-    LoginViewController *login = [[LoginViewController alloc] init];
+    LCYLoginViewController *login = [[LCYLoginViewController alloc] init];
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:login];
     [self.window setRootViewController:navC];
     

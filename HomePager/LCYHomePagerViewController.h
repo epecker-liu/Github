@@ -1,5 +1,5 @@
 //
-//  TabBarController.h
+//  HomePagerViewController.h
 //  GitHub
 //
 //  Created by bytedance on 2020/10/9.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TabBarController : UITabBarController
+@interface LCYHomePagerViewController : UIViewController
 
 @end
 

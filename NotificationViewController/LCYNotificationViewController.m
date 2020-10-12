@@ -6,13 +6,13 @@
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
-#import "NotificationViewController.h"
+#import "LCYNotificationViewController.h"
 
-@interface NotificationViewController ()
+@interface LCYNotificationViewController ()
 
 @end
 
-@implementation NotificationViewController
+@implementation LCYNotificationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

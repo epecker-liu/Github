@@ -1,8 +1,8 @@
 //
-//  LoginViewController.h
+//  TabBarController.h
 //  GitHub
 //
-//  Created by bytedance on 2020/10/3.
+//  Created by bytedance on 2020/10/9.
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoginViewController : UIViewController
+@interface LCYTabBarController : UITabBarController
 
 @end
 

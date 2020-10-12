@@ -11,12 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyWorkData : NSObject
+@interface LCYMyWorkData : NSObject
 
 @property(nonatomic, strong) NSString *workName;
 @property(nonatomic, strong) UIImage *workImage;
 
-- (MyWorkData *)initWithWorkName: (NSString *)workName andWorkImage:(UIImage *)workImage;
+- (LCYMyWorkData *)initWithWorkName: (NSString *)workName WorkImage:(UIImage *)workImage;
 
 @end
 

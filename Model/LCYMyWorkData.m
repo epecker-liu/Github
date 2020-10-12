@@ -6,11 +6,11 @@
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
-#import "MyWorkData.h"
+#import "LCYMyWorkData.h"
 
-@implementation MyWorkData
+@implementation LCYMyWorkData
 
-- (MyWorkData *)initWithWorkName:(NSString *)workName andWorkImage:(UIImage *)workImage
+- (LCYMyWorkData *)initWithWorkName:(NSString *)workName WorkImage:(UIImage *)workImage
 {
     if (self = [super init]) {
         self.workName = workName;
