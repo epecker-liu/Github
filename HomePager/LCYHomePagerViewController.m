@@ -10,6 +10,7 @@
 #import "LCYMyWorkData.h"
 #import <Masonry/Masonry.h>
 #import "LCYFetchNetData.h"
+#import "LCYShowRepOfNetViewController.h"
 
 @interface LCYHomePagerViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -164,7 +165,7 @@
 
 #pragma mark - set table view
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 4;
 }
 
@@ -194,8 +195,8 @@
 - (void) respositories:(UIButton *) button
 {
     if(button.tag == 2){
-        LCYFetchNetData *request = [[LCYFetchNetData alloc] init];
-        [request getData];
+        LCYShowRepOfNetViewController *showRepofNetViewController = [[LCYShowRepOfNetViewController alloc] init];
+        [self.navigationController pushViewController:showRepofNetViewController animated:YES];
     }else{
         NSLog(@"tag not found!");
     }

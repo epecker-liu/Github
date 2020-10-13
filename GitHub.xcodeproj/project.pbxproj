@@ -24,8 +24,10 @@
 		2BEB9D93253073E30022A2A6 /* LCYMyWorkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D92253073E30022A2A6 /* LCYMyWorkData.m */; };
 		2BEB9D992531C3470022A2A6 /* LCYLoginAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9D982531C3470022A2A6 /* LCYLoginAlertView.m */; };
 		2BEB9DE52533F7210022A2A6 /* LCYFetchNetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DE42533F7210022A2A6 /* LCYFetchNetData.m */; };
-		2BEB9DEA2534850D0022A2A6 /* LCYRepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DE92534850D0022A2A6 /* LCYRepModel.m */; };
-		2BEB9DED253485C10022A2A6 /* LCYOwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DEC253485C10022A2A6 /* LCYOwnerModel.m */; };
+		2BEB9DF025354EBB0022A2A6 /* LCYItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DEF25354EBB0022A2A6 /* LCYItemModel.m */; };
+		2BEB9DF4253551560022A2A6 /* LCYUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DF3253551560022A2A6 /* LCYUserModel.m */; };
+		2BEB9DF825357DC10022A2A6 /* LCYShowRepOfNetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DF725357DC10022A2A6 /* LCYShowRepOfNetViewController.m */; };
+		2BEB9DFC25359FEE0022A2A6 /* LCYRepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,10 +80,14 @@
 		2BEB9D982531C3470022A2A6 /* LCYLoginAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYLoginAlertView.m; sourceTree = "<group>"; };
 		2BEB9DE32533F7210022A2A6 /* LCYFetchNetData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYFetchNetData.h; sourceTree = "<group>"; };
 		2BEB9DE42533F7210022A2A6 /* LCYFetchNetData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYFetchNetData.m; sourceTree = "<group>"; };
-		2BEB9DE82534850D0022A2A6 /* LCYRepModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYRepModel.h; sourceTree = "<group>"; };
-		2BEB9DE92534850D0022A2A6 /* LCYRepModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepModel.m; sourceTree = "<group>"; };
-		2BEB9DEB253485C10022A2A6 /* LCYOwnerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYOwnerModel.h; sourceTree = "<group>"; };
-		2BEB9DEC253485C10022A2A6 /* LCYOwnerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYOwnerModel.m; sourceTree = "<group>"; };
+		2BEB9DEE25354EBB0022A2A6 /* LCYItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYItemModel.h; sourceTree = "<group>"; };
+		2BEB9DEF25354EBB0022A2A6 /* LCYItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYItemModel.m; sourceTree = "<group>"; };
+		2BEB9DF2253551560022A2A6 /* LCYUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYUserModel.h; sourceTree = "<group>"; };
+		2BEB9DF3253551560022A2A6 /* LCYUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYUserModel.m; sourceTree = "<group>"; };
+		2BEB9DF625357DC10022A2A6 /* LCYShowRepOfNetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYShowRepOfNetViewController.h; sourceTree = "<group>"; };
+		2BEB9DF725357DC10022A2A6 /* LCYShowRepOfNetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYShowRepOfNetViewController.m; sourceTree = "<group>"; };
+		2BEB9DFA25359FEE0022A2A6 /* LCYRepCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYRepCell.h; sourceTree = "<group>"; };
+		2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepCell.m; sourceTree = "<group>"; };
 		71A342FF9FE2E42FF0CA4235 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
 		8F31CDBA890AEF4FC4350AA9 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1513856F10589417BCFC80 /* libPods-GitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +122,8 @@
 		2BEB9D1C2528507F0022A2A6 = {
 			isa = PBXGroup;
 			children = (
+				2BEB9DF925359F8B0022A2A6 /* RepCellModel */,
+				2BEB9DF525357D6A0022A2A6 /* ShowRepOfNetController */,
 				2BEB9DE22533F6FF0022A2A6 /* FetchNetData */,
 				2BEB9D90253073BA0022A2A6 /* Model */,
 				2BEB9D81253045D50022A2A6 /* SearchPager */,
@@ -236,10 +244,10 @@
 			children = (
 				2BEB9D91253073E30022A2A6 /* LCYMyWorkData.h */,
 				2BEB9D92253073E30022A2A6 /* LCYMyWorkData.m */,
-				2BEB9DE82534850D0022A2A6 /* LCYRepModel.h */,
-				2BEB9DE92534850D0022A2A6 /* LCYRepModel.m */,
-				2BEB9DEB253485C10022A2A6 /* LCYOwnerModel.h */,
-				2BEB9DEC253485C10022A2A6 /* LCYOwnerModel.m */,
+				2BEB9DEE25354EBB0022A2A6 /* LCYItemModel.h */,
+				2BEB9DEF25354EBB0022A2A6 /* LCYItemModel.m */,
+				2BEB9DF2253551560022A2A6 /* LCYUserModel.h */,
+				2BEB9DF3253551560022A2A6 /* LCYUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +259,24 @@
 				2BEB9DE42533F7210022A2A6 /* LCYFetchNetData.m */,
 			);
 			path = FetchNetData;
+			sourceTree = "<group>";
+		};
+		2BEB9DF525357D6A0022A2A6 /* ShowRepOfNetController */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9DF625357DC10022A2A6 /* LCYShowRepOfNetViewController.h */,
+				2BEB9DF725357DC10022A2A6 /* LCYShowRepOfNetViewController.m */,
+			);
+			path = ShowRepOfNetController;
+			sourceTree = "<group>";
+		};
+		2BEB9DF925359F8B0022A2A6 /* RepCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9DFA25359FEE0022A2A6 /* LCYRepCell.h */,
+				2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */,
+			);
+			path = RepCellModel;
 			sourceTree = "<group>";
 		};
 		473E2CCD5DB5FA65213E43EF /* Frameworks */ = {
@@ -427,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BEB9D2A2528507F0022A2A6 /* AppDelegate.m in Sources */,
+				2BEB9DF025354EBB0022A2A6 /* LCYItemModel.m in Sources */,
 				2BEB9D3B252850810022A2A6 /* main.m in Sources */,
 				2BEB9D992531C3470022A2A6 /* LCYLoginAlertView.m in Sources */,
 				2BEB9D93253073E30022A2A6 /* LCYMyWorkData.m in Sources */,
@@ -434,10 +461,11 @@
 				2BEB9D872530462D0022A2A6 /* LCYSearchViewController.m in Sources */,
 				2BEB9DE52533F7210022A2A6 /* LCYFetchNetData.m in Sources */,
 				2BEB9D2D2528507F0022A2A6 /* SceneDelegate.m in Sources */,
-				2BEB9DEA2534850D0022A2A6 /* LCYRepModel.m in Sources */,
+				2BEB9DF825357DC10022A2A6 /* LCYShowRepOfNetViewController.m in Sources */,
+				2BEB9DF4253551560022A2A6 /* LCYUserModel.m in Sources */,
 				2BEB9D80253045280022A2A6 /* LCYNotificationViewController.m in Sources */,
 				2BEB9D7C253040980022A2A6 /* LCYHomePagerViewController.m in Sources */,
-				2BEB9DED253485C10022A2A6 /* LCYOwnerModel.m in Sources */,
+				2BEB9DFC25359FEE0022A2A6 /* LCYRepCell.m in Sources */,
 				2BEB9D60252851410022A2A6 /* LCYLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

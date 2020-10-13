@@ -97,7 +97,7 @@
 - (void)login
 {
     LCYLoginAlertView *vc = [[LCYLoginAlertView alloc] init];
-    vc.alpha = 1;
+    vc.alpha = 0;
     vc.contentView.transform = CGAffineTransformScale(vc.contentView.transform, 2, 2);
     [UIView animateWithDuration:0.5 animations:^{
         vc.alpha = 1;

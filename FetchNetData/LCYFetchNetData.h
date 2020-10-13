@@ -12,11 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-typedef void(^LCYNetworkFetchDataCompletion)(NSArray<LCYMyWorkData *> *, NSError *);   //回调代码块
+typedef void(^LCYNetworkFetchDataCompletion)(NSMutableArray *, NSError *);   //回调代码块
 
 @interface LCYFetchNetData : NSObject
 
-- (void)getData;
+- (void)getData:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion;
 
 @end
 
