@@ -172,10 +172,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellID = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    [self.myWorkTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NSStringFromClass([UITableViewCell class])];
     }
     NSInteger numOfSelectedCell = indexPath.row;
     LCYMyWorkData *currentWorkData = _workData[numOfSelectedCell];
@@ -188,7 +188,6 @@
     [respositoriesRequest addTarget:self action:@selector(respositories:) forControlEvents:UIControlEventTouchUpInside];
     respositoriesRequest.tag = indexPath.row;
     [cell.contentView addSubview:respositoriesRequest];
-    
     return cell;
 }
 
