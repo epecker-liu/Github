@@ -1,5 +1,6 @@
 target 'GitHub' do
     pod 'Mantle' 
     pod 'Masonry'
-    pod 'AFNetworking' 
+    pod 'AFNetworking'
+    pod 'MJRefresh'
 end

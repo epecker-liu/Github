@@ -28,6 +28,7 @@
         [responseObject enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSError *merror = nil;
             LCYItemModel *fullName = [MTLJSONAdapter modelOfClass:[LCYItemModel class] fromJSONDictionary:obj error:nil];
+            stop = NO;
             if(merror){
                 NSLog(@"error-----%@", merror);
             }else{

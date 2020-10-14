@@ -60,12 +60,12 @@
 
 #pragma mark - get image from url
 
--(UIImage *)getImageFromURL:(NSString *)fileURL
+-(UIImage *)getImageFromURL:(NSString *)imageURL
 {
-    UIImage * result;
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
-    result = [UIImage imageWithData:data];
-    return result;
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+    //是否需要对返回结果做判断？
+    UIImage *image = [UIImage imageWithData:data];
+    return image;
 }
 
 @end

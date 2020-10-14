@@ -18,23 +18,27 @@ PODS:
     - Mantle/extobjc (= 2.1.4)
   - Mantle/extobjc (2.1.4)
   - Masonry (1.1.0)
+  - MJRefresh (3.5.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Mantle
   - Masonry
+  - MJRefresh
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - Mantle
     - Masonry
+    - MJRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Mantle: bf2e1b464f82465b9074e9de970739a2615e093a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
 
-PODFILE CHECKSUM: 4165846a3edc9148cc98d2ce5d3c15a6ac37ff58
+PODFILE CHECKSUM: 240cf20e6883b91b2596b072185a1ae03871602a
 
 COCOAPODS: 1.9.3
