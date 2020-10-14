@@ -23,7 +23,8 @@
 
 @implementation LCYLoginViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initLoginUI];
@@ -31,7 +32,8 @@
 
 #pragma mark - initUI
 
-- (void)initLoginUI{
+- (void)initLoginUI
+{
     [self initView];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController setNavigationBarHidden:YES];

@@ -37,7 +37,8 @@
 
 #pragma mark - init UI
 
-- (void)initUI{
+- (void)initUI
+{
     self.view.backgroundColor = [UIColor whiteColor];
     [self initView];
     [self.view addSubview:self.repOfNetTable];
@@ -58,7 +59,8 @@
 
 #pragma mark - init view
 
-- (void)initView{
+- (void)initView
+{
     self.repOfNetTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 180) style:UITableViewStylePlain];
     self.repOfNetTable.dataSource = self;
     self.repOfNetTable.delegate = self;
@@ -139,9 +141,9 @@
             self.repositoriesList = [data mutableCopy];
             [self.repOfNetTable reloadData];
         }
+        [self.repOfNetTable.mj_header endRefreshing];
+        [self.repOfNetTable.mj_footer endRefreshing];
     }];
-    [self.repOfNetTable.mj_header endRefreshing];
-    [self.repOfNetTable.mj_footer endRefreshing];
 }
 
 @end
