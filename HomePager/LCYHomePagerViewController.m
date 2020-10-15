@@ -9,7 +9,7 @@
 #import "LCYHomePagerViewController.h"
 #import "LCYMyWorkData.h"
 #import <Masonry/Masonry.h>
-#import "LCYFetchNetData.h"
+#import "LCYFetchNetDataService.h"
 #import "LCYShowRepOfNetViewController.h"
 
 @interface LCYHomePagerViewController ()<UITableViewDataSource,UITableViewDelegate>

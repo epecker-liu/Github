@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LCYUserModel : MTLModel<MTLJSONSerializing>
 
-@property(nonatomic, strong)NSString *imageUrl;
+@property (nonatomic, strong) NSString *imageUrl;
 
 @end
 

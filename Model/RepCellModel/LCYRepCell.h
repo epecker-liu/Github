@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LCYUserModel.h"
+
+@class LCYUserModel;
 
 NS_ASSUME_NONNULL_BEGIN
 

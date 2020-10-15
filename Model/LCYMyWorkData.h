@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LCYMyWorkData : NSObject
 
-@property(nonatomic, strong) NSString *workName;
-@property(nonatomic, strong) UIImage *workImage;
+@property (nonatomic, strong) NSString *workName;
+@property (nonatomic, strong) UIImage *workImage;
 
 - (instancetype)initWithWorkName: (NSString *)workName WorkImage:(UIImage *)workImage;
 

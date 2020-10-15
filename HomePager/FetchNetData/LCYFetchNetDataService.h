@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^LCYNetworkFetchDataCompletion)(NSMutableArray *, NSError *);   //回调代码块
 
-@interface LCYFetchNetData : NSObject
+@interface LCYFetchNetDataService : NSObject
 
-- (void)getData:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion;
+- (void)fetchDateFromURL:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion;
 
 @end
 

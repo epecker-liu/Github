@@ -10,11 +10,12 @@
 #import <Masonry.h>
 #import "LCYItemModel.h"
 #import <UIKit/UIKit.h>
+#import "LCYUserModel.h"
 
 @interface LCYRepCell()
 
-@property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UILabel *githubProjectNameLabel;
+@property (nonatomic, strong) UIImage *ownerAvatarImage;
 
 @end
 
@@ -33,14 +34,14 @@
 
 - (void)initSubView
 {
-    self.label = [[UILabel alloc] init];
-    [self.contentView addSubview:self.label];
-    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.githubProjectNameLabel = [[UILabel alloc] init];
+    [self.contentView addSubview:self.githubProjectNameLabel];
+    [self.githubProjectNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.contentView.mas_left).offset(50);
         make.centerY.mas_equalTo(self.contentView);
     }];
     
-    self.image = [[UIImage alloc] init];
+    self.ownerAvatarImage = [[UIImage alloc] init];
     [self.contentView addSubview:self.imageView];
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.mas_equalTo(self.contentView.mas_left).offset(5);
@@ -54,13 +55,13 @@
 
 - (void)updateWithModel:(LCYItemModel *)model
 {
-    self.label.text = model.fullName;
-    self.imageView.image = [self getImageFromURL:model.owner.imageUrl];
+    self.githubProjectNameLabel.text = model.fullName;
+    self.imageView.image = [self p_getImageFromURL:model.owner.imageUrl];
 }
 
-#pragma mark - get image from url
+#pragma mark - Private
 
--(UIImage *)getImageFromURL:(NSString *)imageURL
+-(UIImage *)p_getImageFromURL:(NSString *)imageURL
 {
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
     //是否需要对返回结果做判断？

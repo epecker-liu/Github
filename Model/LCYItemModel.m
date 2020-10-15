@@ -11,15 +11,15 @@
 
 @implementation LCYItemModel
 
-+(NSDictionary *)JSONKeyPathsByPropertyKey
++ (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{
-        @"fullName":@"full_name",
-        @"owner":@"owner",
+        @"fullName" : @"full_name",
+        @"owner" : @"owner",
     };
 }
 
-+(NSValueTransformer *)ownerJSONTransformer
++ (NSValueTransformer *)ownerJSONTransformer
 {
     return [MTLJSONAdapter dictionaryTransformerWithModelClass:LCYUserModel.class];
 }

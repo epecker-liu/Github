@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LCYItemModel : MTLModel<MTLJSONSerializing>
 
-@property(nonatomic, strong)NSString *fullName;
-@property (nonatomic, strong)LCYUserModel *owner;
+@property (nonatomic, strong) NSString *fullName;
+@property (nonatomic, strong) LCYUserModel *owner;
 
 @end
 
