@@ -15,7 +15,7 @@
 #import <MTLModel.h>
 #import "LCYItemModel.h"
 
-static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-liu/repos?access_token=2f39704096e5254133aa4eb3dc678eb01ca81c20";
+static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-liu/repos?access_token=be64e4451a446c07524ffd7981bc3b2e444bbb31";
 
 @interface LCYShowRepOfNetViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -80,7 +80,7 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
     }];
 }
 
-#pragma mark - set table cell
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -97,6 +97,8 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
     }
     return repCell;
 }
+
+#pragma mark - UITableViewDeleagte
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(nonnull NSIndexPath *)indexPat
 {

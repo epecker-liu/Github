@@ -34,34 +34,6 @@
 
 - (void)initLoginUI
 {
-    [self initView];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController setNavigationBarHidden:YES];
-    [self.view addSubview:self.githubIconImage];
-    [self.githubIconImage mas_makeConstraints:^ (MASConstraintMaker *make){
-        make.size.mas_equalTo(CGSizeMake(120,120));
-        make.bottom.mas_equalTo(self.view.mas_centerY);
-        make.centerX.mas_equalTo(self.view);
-    }];
-    [self.view addSubview:self.loginButton];
-    [self.loginButton mas_makeConstraints:^ (MASConstraintMaker *make){
-        make.top.mas_equalTo(_githubIconImage.mas_bottom).offset(40);
-        make.height.mas_equalTo(60);
-        make.left.mas_equalTo(self.view.mas_left).offset(10);
-        make.right.mas_equalTo(self.view.mas_right).offset(-10);
-    }];
-    [self.view addSubview:self.explainTextView];
-    [self.explainTextView mas_makeConstraints:^ (MASConstraintMaker *make){
-        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-25);
-        make.height.mas_equalTo(@40);
-        make.width.mas_equalTo(self.view.mas_width);
-    }];
-}
-
-#pragma mark -initView
-
-- (void)initView
-{
     //set github image
     self.githubIconImage = [[UIImageView alloc] init];
     UIImage *icon = [UIImage imageNamed:@"github_icon.png"];
@@ -92,6 +64,28 @@
     self.explainTextView.attributedText = explainMAString;
     self.explainTextView.font = [UIFont fontWithName:@"Arial" size:14];
     self.explainTextView.textAlignment = NSTextAlignmentCenter;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController setNavigationBarHidden:YES];
+    [self.view addSubview:self.githubIconImage];
+    [self.githubIconImage mas_makeConstraints:^ (MASConstraintMaker *make){
+        make.size.mas_equalTo(CGSizeMake(120,120));
+        make.bottom.mas_equalTo(self.view.mas_centerY);
+        make.centerX.mas_equalTo(self.view);
+    }];
+    [self.view addSubview:self.loginButton];
+    [self.loginButton mas_makeConstraints:^ (MASConstraintMaker *make){
+        make.top.mas_equalTo(_githubIconImage.mas_bottom).offset(40);
+        make.height.mas_equalTo(60);
+        make.left.mas_equalTo(self.view.mas_left).offset(10);
+        make.right.mas_equalTo(self.view.mas_right).offset(-10);
+    }];
+    [self.view addSubview:self.explainTextView];
+    [self.explainTextView mas_makeConstraints:^ (MASConstraintMaker *make){
+        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-25);
+        make.height.mas_equalTo(@40);
+        make.width.mas_equalTo(self.view.mas_width);
+    }];
 }
 
 #pragma mark - button event

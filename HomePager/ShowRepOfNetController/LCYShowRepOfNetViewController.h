@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LCYShowRepOfNetViewController : UIViewController
 
-//@property (nonatomic, strong) LCYFetchNetDataService *fetchNetDataService;
-
 @end
 
 NS_ASSUME_NONNULL_END

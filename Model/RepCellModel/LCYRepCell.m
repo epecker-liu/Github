@@ -30,7 +30,7 @@
     return self;
 }
 
-#pragma mark - init subView
+#pragma mark - UI
 
 - (void)initSubView
 {
@@ -51,7 +51,7 @@
     }];
 }
 
-#pragma mark - update with Model
+#pragma mark - Model
 
 - (void)updateWithModel:(LCYItemModel *)model
 {
