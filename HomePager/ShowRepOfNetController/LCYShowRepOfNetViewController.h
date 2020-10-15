@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LCYFetchNetData.h"
+#import "LCYFetchNetDataService.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LCYShowRepOfNetViewController : UIViewController
 
-@property(nonatomic, strong)LCYFetchNetData *fetchNet;
+//@property (nonatomic, strong) LCYFetchNetDataService *fetchNetDataService;
 
 @end
 
