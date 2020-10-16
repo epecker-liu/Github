@@ -31,13 +31,13 @@
 
 @implementation LCYLoginAlertView
 
-- (void)dealloc
+- (void) dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (instancetype)init
+- (instancetype) init
 {
     if (self = [super init]){
         // 接收键盘显示隐藏的通知

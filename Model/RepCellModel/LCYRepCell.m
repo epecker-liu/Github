@@ -16,7 +16,7 @@
 @interface LCYRepCell()
 
 @property (nonatomic, strong) UILabel *githubProjectNameLabel;
-@property (nonatomic, strong) UIImage *ownerAvatarImage;
+@property (nonatomic, strong) UIImageView *ownerAvatarImageView;
 
 @end
 
@@ -42,9 +42,9 @@
         make.centerY.mas_equalTo(self.contentView);
     }];
     
-    self.ownerAvatarImage = [[UIImage alloc] init];
-    [self.contentView addSubview:self.imageView];
-    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make){
+    self.ownerAvatarImageView = [[UIImageView alloc] init];
+    [self.contentView addSubview:self.ownerAvatarImageView];
+    [self.ownerAvatarImageView mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.mas_equalTo(self.contentView.mas_left).offset(5);
         make.centerY.mas_equalTo(self.contentView);
         make.width.mas_equalTo(45);
@@ -58,7 +58,8 @@
 {
     self.githubProjectNameLabel.text = model.fullName;
     //self.imageView.image = [self p_getImageFromURL:model.owner.imageUrl];
-    [self.imageView sd_setImageWithURL:model.owner.imageUrl];
+    //SD框架本身有imageView调用self.imageView的时候回导致没有图，应该使用自定义的self.ownerAvatarImageView.
+    [self.ownerAvatarImageView sd_setImageWithURL:[NSURL URLWithString:model.owner.imageUrl]];
 }
 
 //#pragma mark - Private
