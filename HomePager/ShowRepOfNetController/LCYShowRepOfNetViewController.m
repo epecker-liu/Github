@@ -7,7 +7,7 @@
 //
 
 #import "LCYShowRepOfNetViewController.h"
-#import "LCYFetchNetDataService.h"
+//#import "LCYFetchNetDataService.h"
 #import <Masonry.h>
 #import "LCYRepCell.h"
 #import "LCYMyWorkData.h"
@@ -15,6 +15,7 @@
 #import <MTLModel.h>
 #import "LCYItemModel.h"
 #import <SDWebImage.h>
+#import <AFNetworking/AFNetworking.h>
 
 static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-liu/repos?access_token=b637fbc4c06bf2ff2bc7c9943ccfd17381f5ee4c";
 
@@ -25,7 +26,7 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
 @property (nonatomic, strong) UITableView *repositoriesTableView;
 @property (nonatomic, strong) NSMutableArray *repositoriesList;
 @property (nonatomic, strong) UIButton *editButton;
-@property (nonatomic, strong) LCYFetchNetDataService *fetchNetDataService;
+//@property (nonatomic, strong) LCYFetchNetDataService *fetchNetDataService;
 
 @end
 
@@ -34,7 +35,7 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.fetchNetDataService = [[LCYFetchNetDataService alloc] init];
+    //self.fetchNetDataService = [[LCYFetchNetDataService alloc] init];
     [self initUI];
     [self fetchRepositories];
 }
@@ -132,9 +133,11 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
     [self.repositoriesTableView setEditing:!self.repositoriesTableView.editing];
 }
 
+#pragma mark - NET
+
 - (void)fetchRepositories
 {
-    [self.fetchNetDataService fetchDateFromURL:kLCYRepoDataURL completion:^(NSMutableArray * _Nonnull data ,NSError * _Nonnull err){
+    [self fetchDateFromURL:kLCYRepoDataURL completion:^(NSMutableArray * _Nonnull data ,NSError * _Nonnull err){
         if (err) {
             NSLog(@"fail");
         } else {
@@ -148,6 +151,24 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
         [self.repositoriesTableView.mj_header endRefreshing];
         [self.repositoriesTableView.mj_footer endRefreshing];
     }];
+}
+
+- (void)fetchDateFromURL:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion
+{
+    NSMutableArray *repositoriesList = [[NSMutableArray alloc] init];
+    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
+    NSString *path = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSError *error;
+    [manger GET:path parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject){
+            if(completion){
+                NSLog(@"success");
+                completion(responseObject, nil);
+            }
+        } failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
+            if (completion) {
+                completion(nil, error);
+            }
+        }];
 }
 
 @end

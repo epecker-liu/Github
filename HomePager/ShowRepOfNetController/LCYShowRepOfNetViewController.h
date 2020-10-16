@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LCYFetchNetDataService.h"
+//#import "LCYFetchNetDataService.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^LCYNetworkFetchDataCompletion)(NSMutableArray *, NSError *);   //回调代码块
 
 @interface LCYShowRepOfNetViewController : UIViewController
 
