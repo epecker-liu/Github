@@ -49,11 +49,50 @@
     return self;
 }
 
+#pragma mark - UI
+
 - (void) initLoginAlertUI
 {
     self.frame = [UIScreen mainScreen].bounds;
     self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-    [self initView];
+    //set github icon image
+    self.githubIconImage = [[UIImageView alloc] init];
+    UIImage *icon = [UIImage imageNamed:@"github_icon.png"];
+    self.githubIconImage.image = icon;
+    
+    //set content view
+    self.contentView = [[UIView alloc] init];
+    self.contentView.backgroundColor = [UIColor whiteColor];
+    
+    //set title text view
+    self.titleTextView = [[UITextView alloc] init];
+    self.titleTextView.editable = NO;
+    self.titleTextView.delegate = self;
+    self.titleTextView.scrollEnabled = YES;  //可以换行
+    self.titleTextView.text = @"Sign in to GitHub to continue to GitHub iOS";
+    self.titleTextView.font = [UIFont systemFontOfSize:20];
+    
+    //set password text view
+    self.passwordTextView = [[UITextField alloc]initWithFrame:CGRectMake(20, 42, self.contentView.bounds.size.width, 14)];
+    self.passwordTextView.placeholder = @"password";
+    [self.passwordTextView setBorderStyle:UITextBorderStyleRoundedRect];
+    self.passwordTextView.backgroundColor = [UIColor whiteColor];
+    self.passwordTextView.font = [UIFont systemFontOfSize:12];
+    
+    //set user text view
+    self.userTextView = [[UITextField alloc] initWithFrame:CGRectMake(20, 42, self.contentView.bounds.size.width, 30)];
+    self.userTextView.placeholder = @"username";
+    [self.userTextView setBorderStyle: UITextBorderStyleRoundedRect];
+    self.userTextView.backgroundColor = [UIColor whiteColor];
+    self.userTextView.font = [UIFont systemFontOfSize: 12];
+    
+    //set login button
+    self.loginButton = [[UIButton alloc] init];
+    self.loginButton.backgroundColor = [UIColor greenColor];
+    [self.loginButton setTitle:@"Sign in" forState:UIControlStateNormal];
+    [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.loginButton.layer.cornerRadius = 6;
+    [self.loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:self.contentView];
     [self.contentView mas_makeConstraints:^ (MASConstraintMaker *make){
@@ -102,50 +141,6 @@
         make.left.mas_equalTo(self.contentView.mas_left).mas_offset(10);
         make.right.mas_equalTo(self.contentView.mas_right).mas_offset(-10);
     }];
-}
-
-#pragma mark --init view
-
-- (void)initView
-{
-    //set github icon image
-    self.githubIconImage = [[UIImageView alloc] init];
-    UIImage *icon = [UIImage imageNamed:@"github_icon.png"];
-    self.githubIconImage.image = icon;
-    
-    //set content view
-    self.contentView = [[UIView alloc] init];
-    self.contentView.backgroundColor = [UIColor whiteColor];
-    
-    //set title text view
-    self.titleTextView = [[UITextView alloc] init];
-    self.titleTextView.editable = NO;
-    self.titleTextView.delegate = self;
-    self.titleTextView.scrollEnabled = YES;  //可以换行
-    self.titleTextView.text = @"Sign in to GitHub to continue to GitHub iOS";
-    self.titleTextView.font = [UIFont systemFontOfSize:20];
-    
-    //set password text view
-    self.passwordTextView = [[UITextField alloc]initWithFrame:CGRectMake(20, 42, self.contentView.bounds.size.width, 14)];
-    self.passwordTextView.placeholder = @"password";
-    [self.passwordTextView setBorderStyle:UITextBorderStyleRoundedRect];
-    self.passwordTextView.backgroundColor = [UIColor whiteColor];
-    self.passwordTextView.font = [UIFont systemFontOfSize:12];
-    
-    //set user text view
-    self.userTextView = [[UITextField alloc] initWithFrame:CGRectMake(20, 42, self.contentView.bounds.size.width, 30)];
-    self.userTextView.placeholder = @"username";
-    [self.userTextView setBorderStyle: UITextBorderStyleRoundedRect];
-    self.userTextView.backgroundColor = [UIColor whiteColor];
-    self.userTextView.font = [UIFont systemFontOfSize: 12];
-    
-    //set login button
-    self.loginButton = [[UIButton alloc] init];
-    self.loginButton.backgroundColor = [UIColor greenColor];
-    [self.loginButton setTitle:@"Sign in" forState:UIControlStateNormal];
-    [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.loginButton.layer.cornerRadius = 6;
-    [self.loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark -button event

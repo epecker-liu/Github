@@ -53,11 +53,55 @@
     }
 }
 
-#pragma mark - initUI
+#pragma mark - UI
 
 - (void) initUI
 {
-    [self initView];
+    //set my work label
+    self.myWorkLabel = [[UILabel alloc] init];
+    self.myWorkLabel.text = @"My Work";
+    self.myWorkLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+    
+    //set favorites label
+    self.favoritesLabel = [[UILabel alloc] init];
+    self.favoritesLabel.text = @"Favorites";
+    self.favoritesLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+
+    
+    //set edit button
+    self.editButton = [[UIButton alloc] init];
+    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
+    self.editButton.backgroundColor = [UIColor clearColor];
+    [self.editButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.editButton addTarget:self action:@selector(click_edit) forControlEvents:UIControlEventTouchUpInside];
+
+    //set add button
+    self.addButton = [[UIButton alloc] init];
+    [self.addButton setTitle:@"add" forState:UIControlStateNormal];
+
+    //set recent label
+    self.recentLabel = [[UILabel alloc] init];
+    self.recentLabel.text = @"Recent";
+    self.recentLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+    
+    //set my work table
+    self.myWorkTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 180) style:UITableViewStylePlain];
+    self.myWorkTable.dataSource = self;
+    self.myWorkTable.delegate = self;
+    [self.myWorkTable setSeparatorColor:[UIColor blackColor]];
+
+    //set favorites table
+    self.favoritesTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 90) style:UITableViewStylePlain];
+    self.favoritesTable.dataSource = self;
+    self.favoritesTable.delegate = self;
+    [self.favoritesTable setSeparatorColor:[UIColor blackColor]];
+
+    //set recent table
+    self.recentTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 90) style:UITableViewStylePlain];
+    self.recentTable.dataSource = self;
+    self.recentTable.delegate = self;
+    [self.recentTable setSeparatorColor:[UIColor blackColor]];
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.navigationController setNavigationBarHidden:NO];
     self.navigationController.navigationBar.prefersLargeTitles = YES;
@@ -113,57 +157,7 @@
     }];
 }
 
-#pragma mark - init view
-
-- (void)initView
-{
-    //set my work label
-    self.myWorkLabel = [[UILabel alloc] init];
-    self.myWorkLabel.text = @"My Work";
-    self.myWorkLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
-    
-    //set favorites label
-    self.favoritesLabel = [[UILabel alloc] init];
-    self.favoritesLabel.text = @"Favorites";
-    self.favoritesLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
-
-    
-    //set edit button
-    self.editButton = [[UIButton alloc] init];
-    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
-    self.editButton.backgroundColor = [UIColor clearColor];
-    [self.editButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [self.editButton addTarget:self action:@selector(click_edit) forControlEvents:UIControlEventTouchUpInside];
-
-    //set add button
-    self.addButton = [[UIButton alloc] init];
-    [self.addButton setTitle:@"add" forState:UIControlStateNormal];
-
-    //set recent label
-    self.recentLabel = [[UILabel alloc] init];
-    self.recentLabel.text = @"Recent";
-    self.recentLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
-    
-    //set my work table
-    self.myWorkTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 180) style:UITableViewStylePlain];
-    self.myWorkTable.dataSource = self;
-    self.myWorkTable.delegate = self;
-    [self.myWorkTable setSeparatorColor:[UIColor blackColor]];
-
-    //set favorites table
-    self.favoritesTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 90) style:UITableViewStylePlain];
-    self.favoritesTable.dataSource = self;
-    self.favoritesTable.delegate = self;
-    [self.favoritesTable setSeparatorColor:[UIColor blackColor]];
-
-    //set recent table
-    self.recentTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 90) style:UITableViewStylePlain];
-    self.recentTable.dataSource = self;
-    self.recentTable.delegate = self;
-    [self.recentTable setSeparatorColor:[UIColor blackColor]];
-}
-
-#pragma mark - set table view
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -191,9 +185,9 @@
     return cell;
 }
 
-#pragma mark --respositories request button
+#pragma mark - buttonEvent
 
-- (void) respositories:(UIButton *) button
+- (void) respositories:(UIButton *)button
 {
     if(button.tag == 2){
         LCYShowRepOfNetViewController *showRepofNetViewController = [[LCYShowRepOfNetViewController alloc] init];

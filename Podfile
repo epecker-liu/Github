@@ -3,4 +3,5 @@ target 'GitHub' do
     pod 'Masonry'
     pod 'AFNetworking'
     pod 'MJRefresh'
+    pod 'SDWebImage', '~> 5.0'
 end

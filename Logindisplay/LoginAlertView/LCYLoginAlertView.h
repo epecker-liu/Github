@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIView *contentView;
 
--(void) show;
+- (void) show;
 
 - (instancetype)init;
 

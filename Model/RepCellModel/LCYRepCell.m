@@ -11,6 +11,7 @@
 #import "LCYItemModel.h"
 #import <UIKit/UIKit.h>
 #import "LCYUserModel.h"
+#import <SDWebImage.h>
 
 @interface LCYRepCell()
 
@@ -30,7 +31,7 @@
     return self;
 }
 
-#pragma mark - init subView
+#pragma mark - UI
 
 - (void)initSubView
 {
@@ -51,22 +52,23 @@
     }];
 }
 
-#pragma mark - update with Model
+#pragma mark - Model
 
 - (void)updateWithModel:(LCYItemModel *)model
 {
     self.githubProjectNameLabel.text = model.fullName;
-    self.imageView.image = [self p_getImageFromURL:model.owner.imageUrl];
+    //self.imageView.image = [self p_getImageFromURL:model.owner.imageUrl];
+    [self.imageView sd_setImageWithURL:model.owner.imageUrl];
 }
 
-#pragma mark - Private
-
--(UIImage *)p_getImageFromURL:(NSString *)imageURL
-{
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
-    //是否需要对返回结果做判断？
-    UIImage *image = [UIImage imageWithData:data];
-    return image;
-}
+//#pragma mark - Private
+//
+//-(UIImage *)p_getImageFromURL:(NSString *)imageURL
+//{
+//    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+//    //是否需要对返回结果做判断？
+//    UIImage *image = [UIImage imageWithData:data];
+//    return image;
+//}
 
 @end
