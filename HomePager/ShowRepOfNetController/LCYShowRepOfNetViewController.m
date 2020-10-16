@@ -14,8 +14,9 @@
 #import <MJRefresh.h>
 #import <MTLModel.h>
 #import "LCYItemModel.h"
+#import <SDWebImage.h>
 
-static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-liu/repos?access_token=be64e4451a446c07524ffd7981bc3b2e444bbb31";
+static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-liu/repos?access_token=b637fbc4c06bf2ff2bc7c9943ccfd17381f5ee4c";
 
 @interface LCYShowRepOfNetViewController () <UITableViewDataSource,UITableViewDelegate>
 
