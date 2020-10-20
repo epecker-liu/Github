@@ -19,6 +19,13 @@ PODS:
   - Mantle/extobjc (2.1.4)
   - Masonry (1.1.0)
   - MJRefresh (3.5.0)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - SDWebImage (5.9.2):
     - SDWebImage/Core (= 5.9.2)
   - SDWebImage/Core (5.9.2)
@@ -28,6 +35,7 @@ DEPENDENCIES:
   - Mantle
   - Masonry
   - MJRefresh
+  - ReactiveCocoa (~> 2.5)
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
@@ -36,6 +44,7 @@ SPEC REPOS:
     - Mantle
     - Masonry
     - MJRefresh
+    - ReactiveCocoa
     - SDWebImage
 
 SPEC CHECKSUMS:
@@ -43,8 +52,9 @@ SPEC CHECKSUMS:
   Mantle: bf2e1b464f82465b9074e9de970739a2615e093a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
 
-PODFILE CHECKSUM: 0b45e7dc6492a701e8e82891f83aceb423304f0d
+PODFILE CHECKSUM: 216909bd7617cb36550c2b6fc8639b33fef80afa
 
 COCOAPODS: 1.9.3

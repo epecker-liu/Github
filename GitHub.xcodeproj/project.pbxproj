@@ -28,6 +28,8 @@
 		2BEB9DF4253551560022A2A6 /* LCYUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DF3253551560022A2A6 /* LCYUserModel.m */; };
 		2BEB9DF825357DC10022A2A6 /* LCYShowRepOfNetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DF725357DC10022A2A6 /* LCYShowRepOfNetViewController.m */; };
 		2BEB9DFC25359FEE0022A2A6 /* LCYRepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */; };
+		2BEB9E25253D7D1E0022A2A6 /* LCYSearchUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */; };
+		2BEB9E29253D7EF50022A2A6 /* LCYSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		2BEB9DF725357DC10022A2A6 /* LCYShowRepOfNetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYShowRepOfNetViewController.m; sourceTree = "<group>"; };
 		2BEB9DFA25359FEE0022A2A6 /* LCYRepCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYRepCell.h; sourceTree = "<group>"; };
 		2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepCell.m; sourceTree = "<group>"; };
+		2BEB9E23253D7D1E0022A2A6 /* LCYSearchUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchUserModel.h; sourceTree = "<group>"; };
+		2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchUserModel.m; sourceTree = "<group>"; };
+		2BEB9E27253D7EF50022A2A6 /* LCYSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchModel.h; sourceTree = "<group>"; };
+		2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchModel.m; sourceTree = "<group>"; };
 		71A342FF9FE2E42FF0CA4235 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
 		8F31CDBA890AEF4FC4350AA9 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1513856F10589417BCFC80 /* libPods-GitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,12 +128,13 @@
 		2BEB9D1C2528507F0022A2A6 = {
 			isa = PBXGroup;
 			children = (
-				2BEB9D90253073BA0022A2A6 /* Model */,
+				2BEB9E3A253EDAD20022A2A6 /* Service */,
 				2BEB9D81253045D50022A2A6 /* SearchPager */,
-				2BEB9D7D253044DF0022A2A6 /* NotificationViewController */,
-				2BEB9D79253040530022A2A6 /* HomePager */,
-				2BEB9D6C25302C5A0022A2A6 /* TabBar */,
 				2BEB9D5D252850FF0022A2A6 /* Logindisplay */,
+				2BEB9D6C25302C5A0022A2A6 /* TabBar */,
+				2BEB9D79253040530022A2A6 /* HomePager */,
+				2BEB9D7D253044DF0022A2A6 /* NotificationViewController */,
+				2BEB9D90253073BA0022A2A6 /* Model */,
 				2BEB9D272528507F0022A2A6 /* GitHub */,
 				2BEB9D43252850810022A2A6 /* GitHubTests */,
 				2BEB9D4E252850820022A2A6 /* GitHubUITests */,
@@ -184,9 +191,7 @@
 		2BEB9D5D252850FF0022A2A6 /* Logindisplay */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9D652528E32F0022A2A6 /* LoginAlertView */,
-				2BEB9D5E252851410022A2A6 /* LCYLoginViewController.h */,
-				2BEB9D5F252851410022A2A6 /* LCYLoginViewController.m */,
+				2BEB9E37253ED9DB0022A2A6 /* View */,
 			);
 			path = Logindisplay;
 			sourceTree = "<group>";
@@ -203,8 +208,7 @@
 		2BEB9D6C25302C5A0022A2A6 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9D7625302E300022A2A6 /* LCYTabBarController.h */,
-				2BEB9D7725302E300022A2A6 /* LCYTabBarController.m */,
+				2BEB9E38253ED9F60022A2A6 /* View */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -212,10 +216,9 @@
 		2BEB9D79253040530022A2A6 /* HomePager */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9DE22533F6FF0022A2A6 /* FetchNetData */,
-				2BEB9DF525357D6A0022A2A6 /* ShowRepOfNetController */,
-				2BEB9D7A253040980022A2A6 /* LCYHomePagerViewController.h */,
-				2BEB9D7B253040980022A2A6 /* LCYHomePagerViewController.m */,
+				2BEB9E34253ED9490022A2A6 /* Model */,
+				2BEB9E32253ED8190022A2A6 /* ViewModel */,
+				2BEB9E31253ED7BC0022A2A6 /* View */,
 			);
 			path = HomePager;
 			sourceTree = "<group>";
@@ -223,8 +226,7 @@
 		2BEB9D7D253044DF0022A2A6 /* NotificationViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9D7E253045280022A2A6 /* LCYNotificationViewController.h */,
-				2BEB9D7F253045280022A2A6 /* LCYNotificationViewController.m */,
+				2BEB9E39253EDA140022A2A6 /* View */,
 			);
 			path = NotificationViewController;
 			sourceTree = "<group>";
@@ -232,8 +234,8 @@
 		2BEB9D81253045D50022A2A6 /* SearchPager */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
-				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
+				2BEB9E36253ED9890022A2A6 /* Model */,
+				2BEB9E35253ED97B0022A2A6 /* View */,
 			);
 			path = SearchPager;
 			sourceTree = "<group>";
@@ -244,10 +246,6 @@
 				2BEB9DF925359F8B0022A2A6 /* RepCellModel */,
 				2BEB9D91253073E30022A2A6 /* LCYMyWorkData.h */,
 				2BEB9D92253073E30022A2A6 /* LCYMyWorkData.m */,
-				2BEB9DEE25354EBB0022A2A6 /* LCYItemModel.h */,
-				2BEB9DEF25354EBB0022A2A6 /* LCYItemModel.m */,
-				2BEB9DF2253551560022A2A6 /* LCYUserModel.h */,
-				2BEB9DF3253551560022A2A6 /* LCYUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +275,106 @@
 				2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */,
 			);
 			path = RepCellModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E22253D7CA90022A2A6 /* SearchModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E23253D7D1E0022A2A6 /* LCYSearchUserModel.h */,
+				2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */,
+				2BEB9E27253D7EF50022A2A6 /* LCYSearchModel.h */,
+				2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */,
+			);
+			path = SearchModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E30253EB95C0022A2A6 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9DEE25354EBB0022A2A6 /* LCYItemModel.h */,
+				2BEB9DEF25354EBB0022A2A6 /* LCYItemModel.m */,
+				2BEB9DF2253551560022A2A6 /* LCYUserModel.h */,
+				2BEB9DF3253551560022A2A6 /* LCYUserModel.m */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E31253ED7BC0022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9D7A253040980022A2A6 /* LCYHomePagerViewController.h */,
+				2BEB9D7B253040980022A2A6 /* LCYHomePagerViewController.m */,
+				2BEB9DF525357D6A0022A2A6 /* ShowRepOfNetController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BEB9E32253ED8190022A2A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E34253ED9490022A2A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E30253EB95C0022A2A6 /* UserModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BEB9E35253ED97B0022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
+				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BEB9E36253ED9890022A2A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E22253D7CA90022A2A6 /* SearchModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BEB9E37253ED9DB0022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9D5F252851410022A2A6 /* LCYLoginViewController.m */,
+				2BEB9D5E252851410022A2A6 /* LCYLoginViewController.h */,
+				2BEB9D652528E32F0022A2A6 /* LoginAlertView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BEB9E38253ED9F60022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9D7725302E300022A2A6 /* LCYTabBarController.m */,
+				2BEB9D7625302E300022A2A6 /* LCYTabBarController.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BEB9E39253EDA140022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9D7F253045280022A2A6 /* LCYNotificationViewController.m */,
+				2BEB9D7E253045280022A2A6 /* LCYNotificationViewController.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BEB9E3A253EDAD20022A2A6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9DE22533F6FF0022A2A6 /* FetchNetData */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		473E2CCD5DB5FA65213E43EF /* Frameworks */ = {
@@ -476,6 +574,7 @@
 				2BEB9D992531C3470022A2A6 /* LCYLoginAlertView.m in Sources */,
 				2BEB9D93253073E30022A2A6 /* LCYMyWorkData.m in Sources */,
 				2BEB9D7825302E300022A2A6 /* LCYTabBarController.m in Sources */,
+				2BEB9E29253D7EF50022A2A6 /* LCYSearchModel.m in Sources */,
 				2BEB9D872530462D0022A2A6 /* LCYSearchViewController.m in Sources */,
 				2BEB9DE52533F7210022A2A6 /* LCYFetchNetDataService.m in Sources */,
 				2BEB9D2D2528507F0022A2A6 /* SceneDelegate.m in Sources */,
@@ -483,6 +582,7 @@
 				2BEB9DF4253551560022A2A6 /* LCYUserModel.m in Sources */,
 				2BEB9D80253045280022A2A6 /* LCYNotificationViewController.m in Sources */,
 				2BEB9D7C253040980022A2A6 /* LCYHomePagerViewController.m in Sources */,
+				2BEB9E25253D7D1E0022A2A6 /* LCYSearchUserModel.m in Sources */,
 				2BEB9DFC25359FEE0022A2A6 /* LCYRepCell.m in Sources */,
 				2BEB9D60252851410022A2A6 /* LCYLoginViewController.m in Sources */,
 			);
