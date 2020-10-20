@@ -25,7 +25,7 @@
     NSString *path = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSError *error;
     [manger GET:path parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject){
-            if(completion){
+            if (completion) {
                 NSLog(@"success");
                 completion(responseObject, nil);
             }

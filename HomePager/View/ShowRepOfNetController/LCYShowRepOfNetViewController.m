@@ -111,7 +111,7 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    if(editingStyle == UITableViewCellEditingStyleDelete){
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.repositoriesList removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath]withRowAnimation:UITableViewRowAnimationAutomatic];
     }

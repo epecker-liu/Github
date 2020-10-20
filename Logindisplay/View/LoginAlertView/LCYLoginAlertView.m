@@ -39,7 +39,7 @@
 
 - (instancetype) init
 {
-    if (self = [super init]){
+    if (self = [super init]) {
         // 接收键盘显示隐藏的通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];

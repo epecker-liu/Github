@@ -168,7 +168,7 @@
 {
     [self.myWorkTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
-    if(cell == nil){
+    if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NSStringFromClass([UITableViewCell class])];
     }
     NSInteger numOfSelectedCell = indexPath.row;
@@ -189,10 +189,10 @@
 
 - (void) respositories:(UIButton *)button
 {
-    if(button.tag == 2){
+    if (button.tag == 2) {
         LCYShowRepOfNetViewController *showRepofNetViewController = [[LCYShowRepOfNetViewController alloc] init];
         [self.navigationController pushViewController:showRepofNetViewController animated:YES];
-    }else{
+    } else {
         NSLog(@"tag not found!");
     }
 }
