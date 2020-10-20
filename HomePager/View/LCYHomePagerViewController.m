@@ -10,7 +10,7 @@
 #import "LCYMyWorkData.h"
 #import <Masonry/Masonry.h>
 #import "LCYFetchNetDataService.h"
-#import "LCYShowRepOfNetViewController.h"
+#import "LCYShowRepositoriesViewController.h"
 
 @interface LCYHomePagerViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -190,7 +190,7 @@
 - (void) respositories:(UIButton *)button
 {
     if (button.tag == 2) {
-        LCYShowRepOfNetViewController *showRepofNetViewController = [[LCYShowRepOfNetViewController alloc] init];
+        LCYShowRepositoriesViewController *showRepofNetViewController = [[LCYShowRepositoriesViewController alloc] init];
         [self.navigationController pushViewController:showRepofNetViewController animated:YES];
     } else {
         NSLog(@"tag not found!");

@@ -73,7 +73,7 @@ static NSString *const kSearchAPIString = @"https://api.github.com/search/users?
 {
     NSString *searchURLString  = [NSString stringWithFormat:kSearchAPIString, self.searchTextField.text];
     NSLog(searchURLString);
-    [self.fetchNetDataService fetchDateFromURL:searchURLString completion:^(NSMutableArray * _Nonnull data ,NSError * _Nonnull err){
+    [self.fetchNetDataService fetchDataFromURL:searchURLString completion:^(NSMutableArray * _Nonnull data ,NSError * _Nonnull err){
         if (err) {
             NSLog(@"fail");
         } else {

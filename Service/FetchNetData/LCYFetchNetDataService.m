@@ -18,7 +18,7 @@
 
 @implementation LCYFetchNetDataService
 
-- (void)fetchDateFromURL:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion
+- (void)fetchDataFromURL:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion
 {
     NSMutableArray *repositoriesList = [[NSMutableArray alloc] init];
     AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];

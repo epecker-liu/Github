@@ -1012,5 +1012,626 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "947EBC51-6813-4A8A-9ED0-A641F2B982B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/View/ShowRepOfNetController/LCYShowRepOfNetViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-bindViewModel"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F6618A6-3180-47CE-B0B5-7C2515DF1FD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/View/ShowRepOfNetController/LCYShowRepOfNetViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "-bindViewModel"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6F6618A6-3180-47CE-B0B5-7C2515DF1FD4 - cb6adb8df35b35bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[LCYShowRepOfNetViewController bindViewModel]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/View/ShowRepOfNetController/LCYShowRepOfNetViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "6F6618A6-3180-47CE-B0B5-7C2515DF1FD4 - a326a8c6cfcd579b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_e8_32w"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/View/ShowRepOfNetController/LCYShowRepOfNetViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13D03F97-AF52-4486-BBD0-E58756ADC91A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEF4C021-4212-4E38-B6F5-3686E0107162"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CEF4C021-4212-4E38-B6F5-3686E0107162 - 5e0aa16ae59d8396"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__50-[LCYFetchRepositoriesViewModel fetchRepositories]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "402">
+               </Location>
+               <Location
+                  uuid = "CEF4C021-4212-4E38-B6F5-3686E0107162 - 890b82b08e4c8161"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_e8_32s"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A38FD906-A934-468B-B097-776E78E80FDD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "431C1269-C3F2-49E1-B12F-5FAA024DC9ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00E31EA3-2A89-49F9-A3AC-526E6CE29B05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5353A2C-7459-47CA-8571-654C03589B08"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5353A2C-7459-47CA-8571-654C03589B08 - 5e0aa16ae59d8396"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__50-[LCYFetchRepositoriesViewModel fetchRepositories]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "402">
+               </Location>
+               <Location
+                  uuid = "F5353A2C-7459-47CA-8571-654C03589B08 - 890b82b08e4c8161"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_e8_32s"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD1B0E52-B6FE-4593-B5AB-042F71ABD8BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/View/ShowRepOfNetController/LCYShowRepOfNetViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83EDFB32-73AA-46A9-A176-F4DF21A9BE7D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/View/ShowRepOfNetController/LCYShowRepOfNetViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED944E82-1274-419A-9549-176B306688D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/View/ShowRepOfNetController/LCYShowRepOfNetViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFB44B1A-7B62-4405-854B-48A22C628B7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "212FE20C-03B3-4BB2-98DC-ED94D43A6394"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EC4CD7D-4D21-4B26-A1F2-B6A78ED6F458"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8E2806A-EABE-48ED-BC79-8F523132FF88"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB6B7BED-29E4-4C9A-8192-FD00A86C6C76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15475918-954A-48B9-A533-10103EF06F8D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15475918-954A-48B9-A533-10103EF06F8D - b36bb212f4f739a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LCYFetchNetDataService fetchDateFromURL:completion:]"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/Service/FetchNetData/LCYFetchNetDataService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "394">
+               </Location>
+               <Location
+                  uuid = "15475918-954A-48B9-A533-10103EF06F8D - 68c075eff517fcd7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__54-[LCYFetchNetDataService fetchDateFromURL:completion:]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/Service/FetchNetData/LCYFetchNetDataService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "15475918-954A-48B9-A533-10103EF06F8D - 4990b2ef8f5b7d60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_e8_32b"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/Service/FetchNetData/LCYFetchNetDataService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "15475918-954A-48B9-A533-10103EF06F8D - ed6491682fccccaf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__54-[LCYFetchNetDataService fetchDateFromURL:completion:]_block_invoke.8"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/Service/FetchNetData/LCYFetchNetDataService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7C2A3B5-411F-46C3-AC93-1BBF80C10435"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "630AB67D-E436-40D2-90D1-FD7CDAE4A567"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2624E2F-0089-4D5D-A3EF-61588E4C0294"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2624E2F-0089-4D5D-A3EF-61588E4C0294 - b36bb212f4f739a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LCYFetchNetDataService fetchDateFromURL:completion:]"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/Service/FetchNetData/LCYFetchNetDataService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "265">
+               </Location>
+               <Location
+                  uuid = "F2624E2F-0089-4D5D-A3EF-61588E4C0294 - 68c075eff517fcd7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__54-[LCYFetchNetDataService fetchDateFromURL:completion:]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/Service/FetchNetData/LCYFetchNetDataService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23B9C207-3766-4887-8D9F-67DCCA35A023"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87017820-2A9A-4914-BFF1-37F3ECC6FB9D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A2409E3-E921-43C3-8B4B-F8CF802AA899"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Service/FetchNetData/LCYFetchNetDataService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-fetchDataFromURL:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D34B70FF-09CD-4142-A31A-B4557DF39678"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-fetchRepositories"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D34B70FF-09CD-4142-A31A-B4557DF39678 - 69eab683f118dec1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LCYFetchRepositoriesViewModel fetchRepositories]"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "D34B70FF-09CD-4142-A31A-B4557DF39678 - 5e0aa16ae59d8396"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__50-[LCYFetchRepositoriesViewModel fetchRepositories]_block_invoke"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "D34B70FF-09CD-4142-A31A-B4557DF39678 - cbd8d904fe32200f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_e8_32s"
+                  moduleName = "GitHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/liuchengyang/GitHub/HomePager/ViewModel/LCYFetchRepositoriesViewModel.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

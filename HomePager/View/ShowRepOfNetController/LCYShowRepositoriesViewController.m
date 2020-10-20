@@ -6,7 +6,7 @@
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
-#import "LCYShowRepOfNetViewController.h"
+#import "LCYShowRepositoriesViewController.h"
 #import "LCYFetchNetDataService.h"
 #import <Masonry.h>
 #import "LCYRepCell.h"
@@ -16,30 +16,30 @@
 #import "LCYItemModel.h"
 #import <SDWebImage.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "LCYFetchRepositoriesViewModel.h"
 
-static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-liu/repos?access_token=b637fbc4c06bf2ff2bc7c9943ccfd17381f5ee4c";
 
-@interface LCYShowRepOfNetViewController () <UITableViewDataSource,UITableViewDelegate>
+
+@interface LCYShowRepositoriesViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, assign) NSInteger *lineNum;
 @property (nonatomic, strong) NSMutableArray *workData;
 @property (nonatomic, strong) UITableView *repositoriesTableView;
-@property (nonatomic, strong) NSMutableArray *repositoriesList;
 @property (nonatomic, strong) UIButton *editButton;
-@property (nonatomic, strong) LCYFetchNetDataService *fetchNetDataService;
+@property (nonatomic, strong) LCYFetchRepositoriesViewModel *fetchRepositoriesViewModel;
 //@property (nonatomic, strong) LCYItemModel *githubProjectName;
 
 @end
 
-@implementation LCYShowRepOfNetViewController
+@implementation LCYShowRepositoriesViewController
     
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.fetchNetDataService = [[LCYFetchNetDataService alloc] init];
+    self.fetchRepositoriesViewModel = [[LCYFetchRepositoriesViewModel alloc] init];
     [self initUI];
     [self bindViewModel];
-    [self fetchRepositories];
+    [self.fetchRepositoriesViewModel fetchRepositories];
 }
 
 
@@ -88,7 +88,7 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.repositoriesList.count;
+    return self.fetchRepositoriesViewModel.repositoriesList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,8 +96,8 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
     LCYRepCell *repCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCYRepCell class]) forIndexPath:indexPath];
     repCell.backgroundColor = [UIColor whiteColor];
     repCell.selectionStyle = UITableViewScrollPositionNone;
-    if ([self.repositoriesList count] > indexPath.row) {
-        [repCell updateWithModel:self.repositoriesList[indexPath.row]];
+    if ([self.fetchRepositoriesViewModel.repositoriesList count] > indexPath.row) {
+        [repCell updateWithModel:self.fetchRepositoriesViewModel.repositoriesList[indexPath.row]];
     }
     return repCell;
 }
@@ -112,7 +112,7 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.repositoriesList removeObjectAtIndex:indexPath.row];
+        [self.fetchRepositoriesViewModel.repositoriesList removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath]withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
@@ -135,28 +135,18 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
     [self.repositoriesTableView setEditing:!self.repositoriesTableView.editing];
 }
 
+
 - (void)fetchRepositories
 {
-    [self.fetchNetDataService fetchDateFromURL:kLCYRepoDataURL completion:^(NSMutableArray * _Nonnull data ,NSError * _Nonnull err){
-        if (err) {
-            NSLog(@"fail");
-        } else {
-            NSMutableArray *repositoriesList = [[NSMutableArray alloc] init];
-            for(int i = 0; i < [data count]; i++) {
-                LCYItemModel *githubProjectName = [MTLJSONAdapter modelOfClass:[LCYItemModel class] fromJSONDictionary:data[i] error:nil];
-                [repositoriesList addObject:githubProjectName];
-            }
-            self.repositoriesList = repositoriesList;
-        }
-        [self.repositoriesTableView.mj_header endRefreshing];
-        [self.repositoriesTableView.mj_footer endRefreshing];
-    }];
+    [self.fetchRepositoriesViewModel fetchRepositories];
+    [self.repositoriesTableView.mj_header endRefreshing];
+    [self.repositoriesTableView.mj_footer endRefreshing];
 }
 
 - (void)bindViewModel
 {
     @weakify(self);
-       [RACObserve(self, repositoriesList) subscribeNext:^ (id x){
+    [RACObserve(self, self.fetchRepositoriesViewModel.repositoriesList) subscribeNext:^ (id x){
            NSLog(@"observe success!");
            @strongify(self);
            [self.repositoriesTableView reloadData];

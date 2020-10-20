@@ -16,7 +16,7 @@ typedef void(^LCYNetworkFetchDataCompletion)(NSMutableArray *, NSError *);   //å
 
 @interface LCYFetchNetDataService : NSObject
 
-- (void)fetchDateFromURL:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion;
+- (void)fetchDataFromURL:(NSString *)url completion:(LCYNetworkFetchDataCompletion)completion;
 
 @end
 
