@@ -8,15 +8,15 @@
 
 #import "LCYShowRepositoriesViewController.h"
 #import "LCYFetchNetDataService.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 #import "LCYRepoCell.h"
 #import "LCYMyWorkData.h"
-#import <MJRefresh.h>
+#import <MJRefresh/MJRefresh.h>
 #import <MTLModel.h>
 #import "LCYItemModel.h"
-#import <SDWebImage.h>
+#import <SDWebImage/SDWebImage.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "LCYFetchRepositoriesViewModel.h"
+#import "LCYRepositoriesViewModel.h"
 
 @interface LCYShowRepositoriesViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -24,7 +24,7 @@
 @property (nonatomic, strong) NSMutableArray *workData;
 @property (nonatomic, strong) UITableView *repositoriesTableView;
 @property (nonatomic, strong) UIButton *editButton;
-@property (nonatomic, strong) LCYFetchRepositoriesViewModel *fetchRepositoriesViewModel;
+@property (nonatomic, strong) LCYRepositoriesViewModel *fetchRepositoriesViewModel;
 //@property (nonatomic, strong) LCYItemModel *githubProjectName;
 
 @end
@@ -34,12 +34,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.fetchRepositoriesViewModel = [[LCYFetchRepositoriesViewModel alloc] init];
+    self.fetchRepositoriesViewModel = [[LCYRepositoriesViewModel alloc] init];
     [self initUI];
     [self bindViewModel];
     [self.fetchRepositoriesViewModel fetchRepositories];
 }
 
+- (void)bindViewModel
+{
+    @weakify(self);
+    [RACObserve(self.fetchRepositoriesViewModel, repositoriesList) subscribeNext:^ (id x){
+        NSLog(@"observe success!");
+        @strongify(self);
+        [self.repositoriesTableView reloadData];
+    }];
+}
 
 #pragma mark - init UI
 
@@ -139,16 +148,6 @@
     [self.fetchRepositoriesViewModel fetchRepositories];
     [self.repositoriesTableView.mj_header endRefreshing];
     [self.repositoriesTableView.mj_footer endRefreshing];
-}
-
-- (void)bindViewModel
-{
-    @weakify(self);
-    [RACObserve(self, self.fetchRepositoriesViewModel.repositoriesList) subscribeNext:^ (id x){
-           NSLog(@"observe success!");
-           @strongify(self);
-           [self.repositoriesTableView reloadData];
-       }];
 }
 
 @end

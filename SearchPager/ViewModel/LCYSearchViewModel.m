@@ -31,6 +31,7 @@ static NSString *const kSearchAPIString = @"https://api.github.com/search/users?
 
 - (void)fetchUsersInfo:(NSString *)para
 {
+    __weak typeof(self) weakSelf = self;
     NSString *searchURLString = [NSString stringWithFormat:kSearchAPIString, para];
     [self.fetchNetDataService fetchDataFromURL:searchURLString completion:^ (NSMutableArray * _Nonnull data, NSError * _Nonnull err){
         if (err) {
@@ -42,7 +43,7 @@ static NSString *const kSearchAPIString = @"https://api.github.com/search/users?
             for (int i = 0; i < searchModel.items.count; i++){
                 [userInfo addObject:searchModel.items[i]];
             }
-            self.userInfo = userInfo;
+            weakSelf.userInfo = userInfo;
         }
     }];
 }

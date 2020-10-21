@@ -7,9 +7,9 @@
 //
 
 #import "LCYSearchCellTableViewCell.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 #import "LCYSearchUserModel.h"
-#import <SDWebImage.h>
+#import <SDWebImage/SDWebImage.h>
 
 @interface LCYSearchCellTableViewCell ()
 

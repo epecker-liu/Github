@@ -30,7 +30,7 @@
 		2BEB9DFC25359FEE0022A2A6 /* LCYRepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */; };
 		2BEB9E25253D7D1E0022A2A6 /* LCYSearchUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */; };
 		2BEB9E29253D7EF50022A2A6 /* LCYSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */; };
-		2BEB9E3D253F0B230022A2A6 /* LCYFetchRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E3C253F0B230022A2A6 /* LCYFetchRepositoriesViewModel.m */; };
+		2BEB9E3D253F0B230022A2A6 /* LCYRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E3C253F0B230022A2A6 /* LCYRepositoriesViewModel.m */; };
 		2BEB9E41253FDBC90022A2A6 /* LCYSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E40253FDBC90022A2A6 /* LCYSearchViewModel.m */; };
 		2BEB9E4825400F540022A2A6 /* LCYSearchCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E4725400F540022A2A6 /* LCYSearchCellTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -97,8 +97,8 @@
 		2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchUserModel.m; sourceTree = "<group>"; };
 		2BEB9E27253D7EF50022A2A6 /* LCYSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchModel.h; sourceTree = "<group>"; };
 		2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchModel.m; sourceTree = "<group>"; };
-		2BEB9E3B253F0B230022A2A6 /* LCYFetchRepositoriesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYFetchRepositoriesViewModel.h; sourceTree = "<group>"; };
-		2BEB9E3C253F0B230022A2A6 /* LCYFetchRepositoriesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYFetchRepositoriesViewModel.m; sourceTree = "<group>"; };
+		2BEB9E3B253F0B230022A2A6 /* LCYRepositoriesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYRepositoriesViewModel.h; sourceTree = "<group>"; };
+		2BEB9E3C253F0B230022A2A6 /* LCYRepositoriesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepositoriesViewModel.m; sourceTree = "<group>"; };
 		2BEB9E3F253FDBC90022A2A6 /* LCYSearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchViewModel.h; sourceTree = "<group>"; };
 		2BEB9E40253FDBC90022A2A6 /* LCYSearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchViewModel.m; sourceTree = "<group>"; };
 		2BEB9E4625400F540022A2A6 /* LCYSearchCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchCellTableViewCell.h; sourceTree = "<group>"; };
@@ -311,6 +311,7 @@
 		2BEB9E31253ED7BC0022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9DF925359F8B0022A2A6 /* RepoCellModel */,
 				2BEB9D7A253040980022A2A6 /* LCYHomePagerViewController.h */,
 				2BEB9D7B253040980022A2A6 /* LCYHomePagerViewController.m */,
 				2BEB9DF525357D6A0022A2A6 /* ShowRepOfNetController */,
@@ -321,8 +322,8 @@
 		2BEB9E32253ED8190022A2A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E3B253F0B230022A2A6 /* LCYFetchRepositoriesViewModel.h */,
-				2BEB9E3C253F0B230022A2A6 /* LCYFetchRepositoriesViewModel.m */,
+				2BEB9E3B253F0B230022A2A6 /* LCYRepositoriesViewModel.h */,
+				2BEB9E3C253F0B230022A2A6 /* LCYRepositoriesViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -330,7 +331,6 @@
 		2BEB9E34253ED9490022A2A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9DF925359F8B0022A2A6 /* RepoCellModel */,
 				2BEB9E30253EB95C0022A2A6 /* UserModel */,
 			);
 			path = Model;
@@ -339,6 +339,7 @@
 		2BEB9E35253ED97B0022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9E42253FEDCB0022A2A6 /* SearchCellModel */,
 				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
 				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
 			);
@@ -348,7 +349,6 @@
 		2BEB9E36253ED9890022A2A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E42253FEDCB0022A2A6 /* SearchCellModel */,
 				2BEB9E22253D7CA90022A2A6 /* SearchModel */,
 			);
 			path = Model;
@@ -599,7 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BEB9E3D253F0B230022A2A6 /* LCYFetchRepositoriesViewModel.m in Sources */,
+				2BEB9E3D253F0B230022A2A6 /* LCYRepositoriesViewModel.m in Sources */,
 				2BEB9D2A2528507F0022A2A6 /* AppDelegate.m in Sources */,
 				2BEB9DF025354EBB0022A2A6 /* LCYItemModel.m in Sources */,
 				2BEB9D3B252850810022A2A6 /* main.m in Sources */,

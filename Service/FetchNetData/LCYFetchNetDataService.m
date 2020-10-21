@@ -8,7 +8,7 @@
 
 #import "LCYFetchNetDataService.h"
 #import <AFNetworking/AFNetworking.h>
-#import <Mantle.h>
+#import <Mantle/Mantle.h>
 #import "LCYUserModel.h"
 #import "LCYMyWorkData.h"
 #import "LCYItemModel.h"

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LCYFetchRepositoriesViewModel : NSObject
+@interface LCYRepositoriesViewModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *repositoriesList;
 

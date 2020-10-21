@@ -9,10 +9,10 @@
 #import "LCYSearchViewController.h"
 #import "LCYFetchNetDataService.h"
 #import <Masonry/Masonry.h>
-#import <Mantle.h>
+#import <Mantle/Mantle.h>
 #import "LCYSearchViewModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <MJRefresh.h>
+#import <MJRefresh/MJRefresh.h>
 #import "LCYSearchCellTableViewCell.h"
 
 @interface LCYSearchViewController ()
@@ -33,6 +33,19 @@
     [super viewDidLoad];
     [self bindViewModel];
     [self initSearchPageUI];
+}
+
+- (void)bindViewModel
+{
+    @weakify(self);
+    [RACObserve(self.searchViewModel, userInfo) subscribeNext:^ (id x){
+           NSLog(@"observe search data success!");
+        NSLog(@"userinfo ---- %@", self.searchViewModel.userInfo);
+        NSLog(@"userinfo in fact have %lu array", self.searchViewModel.userInfo.count);
+        NSLog(@"userinfo totalcount --- %lu", self.searchViewModel.totalCount);
+           @strongify(self);
+        [self.searchTableView reloadData];
+       }];
 }
 
 #pragma mark - UI
@@ -142,19 +155,5 @@
     [self.searchTableView.mj_header endRefreshing];
     [self.searchTableView.mj_footer endRefreshing];
 }
-
-- (void)bindViewModel
-{
-    @weakify(self);
-    [RACObserve(self, self.searchViewModel.userInfo) subscribeNext:^ (id x){
-           NSLog(@"observe search data success!");
-        NSLog(@"userinfo ---- %@", self.searchViewModel.userInfo);
-        NSLog(@"userinfo in fact have %lu array", self.searchViewModel.userInfo.count);
-        NSLog(@"userinfo totalcount --- %lu", self.searchViewModel.totalCount);
-           @strongify(self);
-        [self.searchTableView reloadData];
-       }];
-}
-
 
 @end
