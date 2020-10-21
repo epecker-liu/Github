@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LCYRepCell : UITableViewCell
+@interface LCYRepoCell : UITableViewCell
 
 - (void)updateWithModel:(LCYUserModel *)model;
 

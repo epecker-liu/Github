@@ -43,8 +43,6 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
             NSLog(@"-----%@", repositoriesList);
             self.repositoriesList = repositoriesList;
         }
-//        [self.repositoriesTableView.mj_header endRefreshing];
-//        [self.repositoriesTableView.mj_footer endRefreshing];
     }];
 }
 

@@ -6,21 +6,21 @@
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
-#import "LCYRepCell.h"
+#import "LCYRepoCell.h"
 #import <Masonry.h>
 #import "LCYItemModel.h"
 #import <UIKit/UIKit.h>
 #import "LCYUserModel.h"
 #import <SDWebImage.h>
 
-@interface LCYRepCell()
+@interface LCYRepoCell()
 
 @property (nonatomic, strong) UILabel *githubProjectNameLabel;
 @property (nonatomic, strong) UIImageView *ownerAvatarImageView;
 
 @end
 
-@implementation LCYRepCell
+@implementation LCYRepoCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

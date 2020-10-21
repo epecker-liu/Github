@@ -10,16 +10,18 @@
 #import "LCYFetchNetDataService.h"
 #import <Masonry/Masonry.h>
 #import <Mantle.h>
-#import "LCYSearchModel.h"
-
-static NSString *const kSearchAPIString = @"https://api.github.com/search/users?q=%@&access_token=b637fbc4c06bf2ff2bc7c9943ccfd17381f5ee4c";
+#import "LCYSearchViewModel.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <MJRefresh.h>
+#import "LCYSearchCellTableViewCell.h"
 
 @interface LCYSearchViewController ()
 
 @property (nonatomic, strong) UITextField *searchTextField;
 @property (nonatomic, strong) UIButton *searchButton;
-@property (nonatomic, strong) LCYFetchNetDataService *fetchNetDataService;
+@property (nonatomic, strong) LCYSearchViewModel *searchViewModel;
 @property (nonatomic, strong) NSMutableArray *temp;
+@property (nonatomic, strong) UITableView *searchTableView;
 
 @end
 
@@ -27,8 +29,9 @@ static NSString *const kSearchAPIString = @"https://api.github.com/search/users?
 
 - (void)viewDidLoad
 {
-    self.fetchNetDataService = [[LCYFetchNetDataService alloc] init];
+    self.searchViewModel = [[LCYSearchViewModel alloc] init];
     [super viewDidLoad];
+    [self bindViewModel];
     [self initSearchPageUI];
 }
 
@@ -65,30 +68,93 @@ static NSString *const kSearchAPIString = @"https://api.github.com/search/users?
         make.left.mas_equalTo(self.view.mas_left).mas_offset(10);
         make.width.mas_equalTo(self.view.mas_width).mas_equalTo(-20);
     }];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.searchTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 180) style:UITableViewStylePlain];
+    self.searchTableView.dataSource = self;
+    self.searchTableView.delegate = self;
+    [self.searchTableView registerClass:[LCYSearchCellTableViewCell class] forCellReuseIdentifier:NSStringFromClass([LCYSearchCellTableViewCell class])];
+    [self.searchTableView setSeparatorColor:[UIColor blackColor]];
+    
+    //左滑删除
+    self.searchTableView.allowsMultipleSelection = NO;
+    self.searchTableView.allowsSelectionDuringEditing = NO;
+    self.searchTableView.allowsMultipleSelectionDuringEditing = NO;
+    self.searchTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(fetchRepositories)];
+    self.searchTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(fetchRepositories)];
+    
+    [self.view addSubview:self.searchTableView];
+    [self.searchTableView mas_makeConstraints:^ (MASConstraintMaker *make){
+        make.top.mas_equalTo(self.searchButton.mas_bottom).offset(10);
+        make.height.mas_equalTo(self.view.mas_height);
+        make.width.mas_equalTo(self.view);
+    }];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.searchViewModel.totalCount;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    LCYSearchCellTableViewCell *searchCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCYSearchCellTableViewCell class]) forIndexPath:indexPath];
+    searchCell.backgroundColor = [UIColor whiteColor];
+    searchCell.selectionStyle = UITableViewScrollPositionNone;
+    if (self.searchViewModel.userInfo.count > indexPath.row) {
+        [searchCell updateWithModel:self.searchViewModel.userInfo[indexPath.row]];
+    }
+    return searchCell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(nonnull NSIndexPath *)indexPat
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.searchViewModel.userInfo removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath]withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
 }
 
 #pragma mark - button event
 
 - (void)search
 {
-    NSString *searchURLString  = [NSString stringWithFormat:kSearchAPIString, self.searchTextField.text];
-    NSLog(searchURLString);
-    [self.fetchNetDataService fetchDataFromURL:searchURLString completion:^(NSMutableArray * _Nonnull data ,NSError * _Nonnull err){
-        if (err) {
-            NSLog(@"fail");
-        } else {
-            self.temp = [[NSMutableArray alloc] init];
-//            for(int i = 0; i < [data count]; i++) {
-//            LCYSearchModel *githubProjectName = [MTLJSONAdapter modelOfClass:[LCYSearchModel class] fromJSONDictionary:data error:nil];
-            LCYSearchModel *searchItems = [MTLJSONAdapter modelsOfClass:[LCYSearchModel class] fromJSONArray:data error:nil];
-            [self.temp addObject:searchItems.items];
-//            }
-            //[self.repositoriesTableView reloadData];
-        }
-        NSLog(@"temp ---- %@", self.temp);
-//        [self.repositoriesTableView.mj_header endRefreshing];
-//        [self.repositoriesTableView.mj_footer endRefreshing];
-    }];
+    [self.searchViewModel fetchUsersInfo:self.searchTextField.text];
+    [self.searchTableView.mj_header endRefreshing];
+    [self.searchTableView.mj_footer endRefreshing];
 }
+
+- (void)bindViewModel
+{
+    @weakify(self);
+    [RACObserve(self, self.searchViewModel.userInfo) subscribeNext:^ (id x){
+           NSLog(@"observe search data success!");
+        NSLog(@"userinfo ---- %@", self.searchViewModel.userInfo);
+        NSLog(@"userinfo in fact have %lu array", self.searchViewModel.userInfo.count);
+        NSLog(@"userinfo totalcount --- %lu", self.searchViewModel.totalCount);
+           @strongify(self);
+        [self.searchTableView reloadData];
+       }];
+}
+
 
 @end

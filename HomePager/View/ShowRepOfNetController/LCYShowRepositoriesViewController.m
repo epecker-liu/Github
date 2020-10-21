@@ -9,7 +9,7 @@
 #import "LCYShowRepositoriesViewController.h"
 #import "LCYFetchNetDataService.h"
 #import <Masonry.h>
-#import "LCYRepCell.h"
+#import "LCYRepoCell.h"
 #import "LCYMyWorkData.h"
 #import <MJRefresh.h>
 #import <MTLModel.h>
@@ -17,8 +17,6 @@
 #import <SDWebImage.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "LCYFetchRepositoriesViewModel.h"
-
-
 
 @interface LCYShowRepositoriesViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -51,7 +49,7 @@
     self.repositoriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, self.view.bounds.size.width, 180) style:UITableViewStylePlain];
     self.repositoriesTableView.dataSource = self;
     self.repositoriesTableView.delegate = self;
-    [self.repositoriesTableView registerClass:[LCYRepCell class] forCellReuseIdentifier:NSStringFromClass([LCYRepCell class])];
+    [self.repositoriesTableView registerClass:[LCYRepoCell class] forCellReuseIdentifier:NSStringFromClass([LCYRepoCell class])];
     [self.repositoriesTableView setSeparatorColor:[UIColor blackColor]];
     
     self.editButton = [[UIButton alloc] init];
@@ -93,7 +91,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LCYRepCell *repCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCYRepCell class]) forIndexPath:indexPath];
+    LCYRepoCell *repCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCYRepoCell class]) forIndexPath:indexPath];
     repCell.backgroundColor = [UIColor whiteColor];
     repCell.selectionStyle = UITableViewScrollPositionNone;
     if ([self.fetchRepositoriesViewModel.repositoriesList count] > indexPath.row) {

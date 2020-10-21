@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LCYSearchModel : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *totalCount;
-@property (nonatomic, strong) NSMutableArray *items;
+@property (nonatomic, strong) NSArray *items;
 
 @end
 

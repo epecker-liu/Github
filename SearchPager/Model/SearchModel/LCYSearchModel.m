@@ -20,7 +20,7 @@
     };
 }
 
-+ (NSValueTransformer *)searchModelJSONTransformer
++ (NSValueTransformer *)itemsJSONTransformer
 {
     return [MTLJSONAdapter arrayTransformerWithModelClass:LCYSearchUserModel.class];
 }
