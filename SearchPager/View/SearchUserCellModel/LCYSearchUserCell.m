@@ -6,18 +6,19 @@
 //  Copyright © 2020 bytedance. All rights reserved.
 //
 
-#import "LCYSearchCellTableViewCell.h"
+#import "LCYSearchUserCell.h"
 #import <Masonry/Masonry.h>
 #import "LCYSearchUserModel.h"
 #import <SDWebImage/SDWebImage.h>
 
-@interface LCYSearchCellTableViewCell ()
+@interface LCYSearchUserCell()
 
 @property (nonatomic, strong) UILabel *userNameLabel;
 @property (nonatomic, strong) UIImageView *avatarImageView;
 
 @end
-@implementation LCYSearchCellTableViewCell
+
+@implementation LCYSearchUserCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

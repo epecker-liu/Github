@@ -27,12 +27,20 @@
 		2BEB9DF025354EBB0022A2A6 /* LCYItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DEF25354EBB0022A2A6 /* LCYItemModel.m */; };
 		2BEB9DF4253551560022A2A6 /* LCYUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DF3253551560022A2A6 /* LCYUserModel.m */; };
 		2BEB9DF825357DC10022A2A6 /* LCYShowRepositoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DF725357DC10022A2A6 /* LCYShowRepositoriesViewController.m */; };
-		2BEB9DFC25359FEE0022A2A6 /* LCYRepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */; };
+		2BEB9DFC25359FEE0022A2A6 /* LCYRepoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9DFB25359FEE0022A2A6 /* LCYRepoCell.m */; };
 		2BEB9E25253D7D1E0022A2A6 /* LCYSearchUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */; };
 		2BEB9E29253D7EF50022A2A6 /* LCYSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */; };
 		2BEB9E3D253F0B230022A2A6 /* LCYRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E3C253F0B230022A2A6 /* LCYRepositoriesViewModel.m */; };
-		2BEB9E41253FDBC90022A2A6 /* LCYSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E40253FDBC90022A2A6 /* LCYSearchViewModel.m */; };
-		2BEB9E4825400F540022A2A6 /* LCYSearchCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E4725400F540022A2A6 /* LCYSearchCellTableViewCell.m */; };
+		2BEB9E41253FDBC90022A2A6 /* LCYSearchUserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E40253FDBC90022A2A6 /* LCYSearchUserViewModel.m */; };
+		2BEB9E4825400F540022A2A6 /* LCYSearchUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E4725400F540022A2A6 /* LCYSearchUserCell.m */; };
+		2BEB9E4F254070E80022A2A6 /* LCYHistoryRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E4E254070E80022A2A6 /* LCYHistoryRecordView.m */; };
+		2BEB9E56254072C20022A2A6 /* LCYHistoryRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E55254072C20022A2A6 /* LCYHistoryRecordCell.m */; };
+		2BEB9E5A25412D190022A2A6 /* LCYHistoryRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E5925412D190022A2A6 /* LCYHistoryRecordModel.m */; };
+		2BEB9E5E2541308C0022A2A6 /* LCYHistoryRecordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E5D2541308C0022A2A6 /* LCYHistoryRecordViewModel.m */; };
+		2BEB9E622541C80D0022A2A6 /* LCYSearchOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E612541C80D0022A2A6 /* LCYSearchOptionsCell.m */; };
+		2BEB9E662542ABDD0022A2A6 /* LCYSearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E652542ABDD0022A2A6 /* LCYSearchUserViewController.m */; };
+		2BEB9E6B2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E6A2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m */; };
+		2BEB9E6F2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,17 +100,33 @@
 		2BEB9DF625357DC10022A2A6 /* LCYShowRepositoriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYShowRepositoriesViewController.h; sourceTree = "<group>"; };
 		2BEB9DF725357DC10022A2A6 /* LCYShowRepositoriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYShowRepositoriesViewController.m; sourceTree = "<group>"; };
 		2BEB9DFA25359FEE0022A2A6 /* LCYRepoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYRepoCell.h; sourceTree = "<group>"; };
-		2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepCell.m; sourceTree = "<group>"; };
+		2BEB9DFB25359FEE0022A2A6 /* LCYRepoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepoCell.m; sourceTree = "<group>"; };
 		2BEB9E23253D7D1E0022A2A6 /* LCYSearchUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchUserModel.h; sourceTree = "<group>"; };
 		2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchUserModel.m; sourceTree = "<group>"; };
 		2BEB9E27253D7EF50022A2A6 /* LCYSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchModel.h; sourceTree = "<group>"; };
 		2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchModel.m; sourceTree = "<group>"; };
 		2BEB9E3B253F0B230022A2A6 /* LCYRepositoriesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYRepositoriesViewModel.h; sourceTree = "<group>"; };
 		2BEB9E3C253F0B230022A2A6 /* LCYRepositoriesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYRepositoriesViewModel.m; sourceTree = "<group>"; };
-		2BEB9E3F253FDBC90022A2A6 /* LCYSearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchViewModel.h; sourceTree = "<group>"; };
-		2BEB9E40253FDBC90022A2A6 /* LCYSearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchViewModel.m; sourceTree = "<group>"; };
-		2BEB9E4625400F540022A2A6 /* LCYSearchCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchCellTableViewCell.h; sourceTree = "<group>"; };
-		2BEB9E4725400F540022A2A6 /* LCYSearchCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchCellTableViewCell.m; sourceTree = "<group>"; };
+		2BEB9E3F253FDBC90022A2A6 /* LCYSearchUserViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchUserViewModel.h; sourceTree = "<group>"; };
+		2BEB9E40253FDBC90022A2A6 /* LCYSearchUserViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchUserViewModel.m; sourceTree = "<group>"; };
+		2BEB9E4625400F540022A2A6 /* LCYSearchUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchUserCell.h; sourceTree = "<group>"; };
+		2BEB9E4725400F540022A2A6 /* LCYSearchUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchUserCell.m; sourceTree = "<group>"; };
+		2BEB9E4D254070E80022A2A6 /* LCYHistoryRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYHistoryRecordView.h; sourceTree = "<group>"; };
+		2BEB9E4E254070E80022A2A6 /* LCYHistoryRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYHistoryRecordView.m; sourceTree = "<group>"; };
+		2BEB9E54254072C20022A2A6 /* LCYHistoryRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYHistoryRecordCell.h; sourceTree = "<group>"; };
+		2BEB9E55254072C20022A2A6 /* LCYHistoryRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYHistoryRecordCell.m; sourceTree = "<group>"; };
+		2BEB9E5825412D190022A2A6 /* LCYHistoryRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYHistoryRecordModel.h; sourceTree = "<group>"; };
+		2BEB9E5925412D190022A2A6 /* LCYHistoryRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYHistoryRecordModel.m; sourceTree = "<group>"; };
+		2BEB9E5C2541308C0022A2A6 /* LCYHistoryRecordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYHistoryRecordViewModel.h; sourceTree = "<group>"; };
+		2BEB9E5D2541308C0022A2A6 /* LCYHistoryRecordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYHistoryRecordViewModel.m; sourceTree = "<group>"; };
+		2BEB9E602541C80D0022A2A6 /* LCYSearchOptionsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchOptionsCell.h; sourceTree = "<group>"; };
+		2BEB9E612541C80D0022A2A6 /* LCYSearchOptionsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchOptionsCell.m; sourceTree = "<group>"; };
+		2BEB9E642542ABDD0022A2A6 /* LCYSearchUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchUserViewController.h; sourceTree = "<group>"; };
+		2BEB9E652542ABDD0022A2A6 /* LCYSearchUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchUserViewController.m; sourceTree = "<group>"; };
+		2BEB9E692542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesViewController.h; sourceTree = "<group>"; };
+		2BEB9E6A2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesViewController.m; sourceTree = "<group>"; };
+		2BEB9E6D2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesCell.h; sourceTree = "<group>"; };
+		2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesCell.m; sourceTree = "<group>"; };
 		71A342FF9FE2E42FF0CA4235 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
 		8F31CDBA890AEF4FC4350AA9 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1513856F10589417BCFC80 /* libPods-GitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,20 +292,20 @@
 			path = FetchNetData;
 			sourceTree = "<group>";
 		};
-		2BEB9DF525357D6A0022A2A6 /* ShowRepOfNetController */ = {
+		2BEB9DF525357D6A0022A2A6 /* ShowRepoController */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9DF625357DC10022A2A6 /* LCYShowRepositoriesViewController.h */,
 				2BEB9DF725357DC10022A2A6 /* LCYShowRepositoriesViewController.m */,
 			);
-			path = ShowRepOfNetController;
+			path = ShowRepoController;
 			sourceTree = "<group>";
 		};
 		2BEB9DF925359F8B0022A2A6 /* RepoCellModel */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9DFA25359FEE0022A2A6 /* LCYRepoCell.h */,
-				2BEB9DFB25359FEE0022A2A6 /* LCYRepCell.m */,
+				2BEB9DFB25359FEE0022A2A6 /* LCYRepoCell.m */,
 			);
 			path = RepoCellModel;
 			sourceTree = "<group>";
@@ -314,7 +338,7 @@
 				2BEB9DF925359F8B0022A2A6 /* RepoCellModel */,
 				2BEB9D7A253040980022A2A6 /* LCYHomePagerViewController.h */,
 				2BEB9D7B253040980022A2A6 /* LCYHomePagerViewController.m */,
-				2BEB9DF525357D6A0022A2A6 /* ShowRepOfNetController */,
+				2BEB9DF525357D6A0022A2A6 /* ShowRepoController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,7 +363,13 @@
 		2BEB9E35253ED97B0022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E42253FEDCB0022A2A6 /* SearchCellModel */,
+				2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCellModel */,
+				2BEB9E682542CA520022A2A6 /* SearchRepositoriesViewController */,
+				2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */,
+				2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCellModel */,
+				2BEB9E532540729F0022A2A6 /* HistoryCellModel */,
+				2BEB9E49254070120022A2A6 /* HistoryRecord */,
+				2BEB9E42253FEDCB0022A2A6 /* SearchUserCellModel */,
 				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
 				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
 			);
@@ -349,6 +379,7 @@
 		2BEB9E36253ED9890022A2A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9E5725412CD30022A2A6 /* HistoryRecordModel */,
 				2BEB9E22253D7CA90022A2A6 /* SearchModel */,
 			);
 			path = Model;
@@ -393,19 +424,100 @@
 		2BEB9E3E253FDA8E0022A2A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E3F253FDBC90022A2A6 /* LCYSearchViewModel.h */,
-				2BEB9E40253FDBC90022A2A6 /* LCYSearchViewModel.m */,
+				2BEB9E672542C9CC0022A2A6 /* SearchUserViewModel */,
+				2BEB9E5B2541305C0022A2A6 /* HistoryRecordViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2BEB9E42253FEDCB0022A2A6 /* SearchCellModel */ = {
+		2BEB9E42253FEDCB0022A2A6 /* SearchUserCellModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E4625400F540022A2A6 /* LCYSearchCellTableViewCell.h */,
-				2BEB9E4725400F540022A2A6 /* LCYSearchCellTableViewCell.m */,
+				2BEB9E4625400F540022A2A6 /* LCYSearchUserCell.h */,
+				2BEB9E4725400F540022A2A6 /* LCYSearchUserCell.m */,
 			);
-			path = SearchCellModel;
+			path = SearchUserCellModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E49254070120022A2A6 /* HistoryRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E4D254070E80022A2A6 /* LCYHistoryRecordView.h */,
+				2BEB9E4E254070E80022A2A6 /* LCYHistoryRecordView.m */,
+			);
+			path = HistoryRecord;
+			sourceTree = "<group>";
+		};
+		2BEB9E532540729F0022A2A6 /* HistoryCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E54254072C20022A2A6 /* LCYHistoryRecordCell.h */,
+				2BEB9E55254072C20022A2A6 /* LCYHistoryRecordCell.m */,
+			);
+			path = HistoryCellModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E5725412CD30022A2A6 /* HistoryRecordModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E5825412D190022A2A6 /* LCYHistoryRecordModel.h */,
+				2BEB9E5925412D190022A2A6 /* LCYHistoryRecordModel.m */,
+			);
+			path = HistoryRecordModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E5B2541305C0022A2A6 /* HistoryRecordViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E5C2541308C0022A2A6 /* LCYHistoryRecordViewModel.h */,
+				2BEB9E5D2541308C0022A2A6 /* LCYHistoryRecordViewModel.m */,
+			);
+			path = HistoryRecordViewModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E602541C80D0022A2A6 /* LCYSearchOptionsCell.h */,
+				2BEB9E612541C80D0022A2A6 /* LCYSearchOptionsCell.m */,
+			);
+			path = SearchOptionsCellModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E642542ABDD0022A2A6 /* LCYSearchUserViewController.h */,
+				2BEB9E652542ABDD0022A2A6 /* LCYSearchUserViewController.m */,
+			);
+			path = SearchUserViewController;
+			sourceTree = "<group>";
+		};
+		2BEB9E672542C9CC0022A2A6 /* SearchUserViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E3F253FDBC90022A2A6 /* LCYSearchUserViewModel.h */,
+				2BEB9E40253FDBC90022A2A6 /* LCYSearchUserViewModel.m */,
+			);
+			path = SearchUserViewModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E682542CA520022A2A6 /* SearchRepositoriesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E692542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.h */,
+				2BEB9E6A2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m */,
+			);
+			path = SearchRepositoriesViewController;
+			sourceTree = "<group>";
+		};
+		2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E6D2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.h */,
+				2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */,
+			);
+			path = SearchRepositoriesCellModel;
 			sourceTree = "<group>";
 		};
 		473E2CCD5DB5FA65213E43EF /* Frameworks */ = {
@@ -599,7 +711,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BEB9E56254072C20022A2A6 /* LCYHistoryRecordCell.m in Sources */,
+				2BEB9E6F2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m in Sources */,
 				2BEB9E3D253F0B230022A2A6 /* LCYRepositoriesViewModel.m in Sources */,
+				2BEB9E4F254070E80022A2A6 /* LCYHistoryRecordView.m in Sources */,
+				2BEB9E6B2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m in Sources */,
+				2BEB9E662542ABDD0022A2A6 /* LCYSearchUserViewController.m in Sources */,
+				2BEB9E5E2541308C0022A2A6 /* LCYHistoryRecordViewModel.m in Sources */,
 				2BEB9D2A2528507F0022A2A6 /* AppDelegate.m in Sources */,
 				2BEB9DF025354EBB0022A2A6 /* LCYItemModel.m in Sources */,
 				2BEB9D3B252850810022A2A6 /* main.m in Sources */,
@@ -607,17 +725,19 @@
 				2BEB9D93253073E30022A2A6 /* LCYMyWorkData.m in Sources */,
 				2BEB9D7825302E300022A2A6 /* LCYTabBarController.m in Sources */,
 				2BEB9E29253D7EF50022A2A6 /* LCYSearchModel.m in Sources */,
-				2BEB9E4825400F540022A2A6 /* LCYSearchCellTableViewCell.m in Sources */,
+				2BEB9E4825400F540022A2A6 /* LCYSearchUserCell.m in Sources */,
+				2BEB9E622541C80D0022A2A6 /* LCYSearchOptionsCell.m in Sources */,
 				2BEB9D872530462D0022A2A6 /* LCYSearchViewController.m in Sources */,
 				2BEB9DE52533F7210022A2A6 /* LCYFetchNetDataService.m in Sources */,
+				2BEB9E5A25412D190022A2A6 /* LCYHistoryRecordModel.m in Sources */,
 				2BEB9D2D2528507F0022A2A6 /* SceneDelegate.m in Sources */,
 				2BEB9DF825357DC10022A2A6 /* LCYShowRepositoriesViewController.m in Sources */,
 				2BEB9DF4253551560022A2A6 /* LCYUserModel.m in Sources */,
 				2BEB9D80253045280022A2A6 /* LCYNotificationViewController.m in Sources */,
-				2BEB9E41253FDBC90022A2A6 /* LCYSearchViewModel.m in Sources */,
+				2BEB9E41253FDBC90022A2A6 /* LCYSearchUserViewModel.m in Sources */,
 				2BEB9D7C253040980022A2A6 /* LCYHomePagerViewController.m in Sources */,
 				2BEB9E25253D7D1E0022A2A6 /* LCYSearchUserModel.m in Sources */,
-				2BEB9DFC25359FEE0022A2A6 /* LCYRepCell.m in Sources */,
+				2BEB9DFC25359FEE0022A2A6 /* LCYRepoCell.m in Sources */,
 				2BEB9D60252851410022A2A6 /* LCYLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

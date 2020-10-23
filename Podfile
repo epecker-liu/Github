@@ -5,4 +5,5 @@ target 'GitHub' do
     pod 'MJRefresh'
     pod 'SDWebImage', '~> 5.0'
     pod 'ReactiveCocoa', '~> 2.5'
+    pod 'WHToast'
 end

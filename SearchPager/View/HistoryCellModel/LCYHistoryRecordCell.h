@@ -1,5 +1,5 @@
 //
-//  LCYSearchCellTableViewCell.h
+//  LCYHistoryRecordCell.h
 //  GitHub
 //
 //  Created by bytedance on 2020/10/21.
@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LCYSearchModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LCYSearchCellTableViewCell : UITableViewCell
+@interface LCYHistoryRecordCell : UITableViewCell
 
-- (void)updateWithModel:(LCYSearchModel *)model;
+@property (nonatomic, strong) NSArray *historyRecordArray;
+
+- (void)updateWithPlist:(NSString *)historyRecordLabel;
 
 @end
 

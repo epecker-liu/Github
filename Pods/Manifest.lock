@@ -29,6 +29,7 @@ PODS:
   - SDWebImage (5.9.2):
     - SDWebImage/Core (= 5.9.2)
   - SDWebImage/Core (5.9.2)
+  - WHToast (0.0.7)
 
 DEPENDENCIES:
   - AFNetworking
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - MJRefresh
   - ReactiveCocoa (~> 2.5)
   - SDWebImage (~> 5.0)
+  - WHToast
 
 SPEC REPOS:
   trunk:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - MJRefresh
     - ReactiveCocoa
     - SDWebImage
+    - WHToast
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -54,7 +57,8 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+  WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
 
-PODFILE CHECKSUM: 216909bd7617cb36550c2b6fc8639b33fef80afa
+PODFILE CHECKSUM: 7af43d52ecac1325df182d4b603c490fcf11ff96
 
 COCOAPODS: 1.9.3

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LCYSearchViewModel : NSObject
+@interface LCYSearchUserViewModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *userInfo;
 @property (nonatomic, assign) NSUInteger totalCount;
