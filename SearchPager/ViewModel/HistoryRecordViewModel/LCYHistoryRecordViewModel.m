@@ -22,7 +22,6 @@
     self = [super init];
     if (self) {
         self.historyRecordModel = [[LCYHistoryRecordModel alloc] init];
-//        self.historyRecordArray = [[NSArray alloc] init];
     }
     return self;
 }

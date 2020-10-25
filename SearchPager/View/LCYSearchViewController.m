@@ -24,6 +24,7 @@
 #import "LCYSearchOptionsCell.h"
 #import "LCYSearchUserViewController.h"
 #import <WHToast/WHToast.h>
+#import "LCYSearchRepositoriesViewController.h"
 
 @interface LCYSearchViewController ()
 
@@ -36,6 +37,7 @@
 @property (nonatomic, strong) LCYHistoryRecordModel *historyRecordModel;
 @property (nonatomic, strong) UITableView *historyRecordTableView;
 @property (nonatomic, strong) UITableView *searchOptionsTableView;
+@property (nonatomic, strong) UILabel *titleLabel;
 
 @end
 
@@ -93,6 +95,15 @@
         make.top.equalTo(self.view.mas_top).offset(110);
         make.width.mas_equalTo(self.view.mas_width).mas_offset(-20);
         make.height.mas_equalTo(30);
+    }];
+    
+    self.titleLabel = [[UILabel alloc] init];
+    self.titleLabel.text = @"近期搜索";
+    [self.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
+    [self.view addSubview:self.titleLabel];
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        make.top.mas_equalTo(self.searchTextField.mas_bottom).offset(10);
     }];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -170,29 +181,29 @@
     return nil;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if ([tableView isEqual:self.historyRecordTableView]) {
-        return @"近期搜索";
-    } else {
-        return nil;
-    }
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    if ([tableView isEqual:self.historyRecordTableView]) {
+//        return @"近期搜索";
+//    } else {
+//        return nil;
+//    }
+//}
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    if ([tableView isEqual:self.historyRecordTableView]) {
-        UILabel *myLabel = [[UILabel alloc] init];
-        myLabel.frame = CGRectMake(20, 0, 320, 25);
-        myLabel.font = [UIFont boldSystemFontOfSize:24];
-        myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
-        UIView *headerView = [[UIView alloc] init];
-        [headerView addSubview:myLabel];
-        return headerView;
-    } else {
-        return nil;
-    }
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    if ([tableView isEqual:self.historyRecordTableView]) {
+//        UILabel *myLabel = [[UILabel alloc] init];
+//        myLabel.frame = CGRectMake(20, 0, 320, 25);
+//        myLabel.font = [UIFont boldSystemFontOfSize:24];
+//        myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
+//        UIView *headerView = [[UIView alloc] init];
+//        [headerView addSubview:myLabel];
+//        return headerView;
+//    } else {
+//        return nil;
+//    }
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
@@ -201,7 +212,7 @@
     } else if ([tableView isEqual:self.searchOptionsTableView]) {
         switch (indexPath.row) {
             case 0: {
-                LCYSearchUserViewController *searchRepositoriesViewController = [[LCYSearchUserViewController alloc] init];
+                LCYSearchRepositoriesViewController *searchRepositoriesViewController = [[LCYSearchRepositoriesViewController alloc] init];
                 [searchRepositoriesViewController setSearchText:self.searchTextField.text];
                 [self.navigationController pushViewController:searchRepositoriesViewController animated:YES];
                 break;
@@ -215,7 +226,9 @@
                 }];
                 break;
             case 3: {
-                
+                LCYSearchUserViewController *searchUserViewController = [[LCYSearchUserViewController alloc] init];
+                [searchUserViewController setSearchText:self.searchTextField.text];
+                [self.navigationController pushViewController:searchUserViewController animated:YES];
                 break;
             }
             case 4:

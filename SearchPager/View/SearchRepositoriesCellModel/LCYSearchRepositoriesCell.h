@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LCYSearchRepositoriesModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LCYSearchRepositoriesCell : UICollectionViewCell
+
+- (void)updateWithModel:(LCYSearchRepositoriesModel *)model;
 
 @end
 

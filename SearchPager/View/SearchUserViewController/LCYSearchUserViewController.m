@@ -15,7 +15,7 @@
 @interface LCYSearchUserViewController ()
 
 @property (nonatomic, strong) UITableView *searchRepositoriesTableView;
-@property (nonatomic, strong) LCYSearchUserViewModel *searchViewModel;
+@property (nonatomic, strong) LCYSearchUserViewModel *searchUserViewModel;
 @property (nonatomic, strong) NSString *searchTextString;
 
 @end
@@ -25,13 +25,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    self.searchTextString = [[NSString alloc] init];
-    self.searchViewModel = [[LCYSearchUserViewModel alloc] init];
+    self.searchUserViewModel = [[LCYSearchUserViewModel alloc] init];
     [self bindViewModel];
     [self initData];
     [self initUI];
-    [self.searchViewModel fetchUsersInfo:self.searchTextString];
+    [self.searchUserViewModel fetchUsersInfo:self.searchTextString];
 }
 
 - (void)setSearchText:(NSString *)searchText
@@ -44,11 +42,11 @@
 - (void)bindViewModel
 {
     @weakify(self);
-    [RACObserve(self.searchViewModel, userInfo) subscribeNext:^ (id x){
+    [RACObserve(self.searchUserViewModel, userInfo) subscribeNext:^ (id x){
         NSLog(@"observe search data success!");
-        NSLog(@"userinfo ---- %@", self.searchViewModel.userInfo);
-        NSLog(@"userinfo in fact have %lu array", self.searchViewModel.userInfo.count);
-        NSLog(@"userinfo totalcount --- %lu", self.searchViewModel.totalCount);
+        NSLog(@"userinfo ---- %@", self.searchUserViewModel.userInfo);
+        NSLog(@"userinfo in fact have %lu array", self.searchUserViewModel.userInfo.count);
+        NSLog(@"userinfo totalcount --- %lu", self.searchUserViewModel.totalCount);
         @strongify(self);
         [self.searchRepositoriesTableView reloadData];
     }];
@@ -56,7 +54,7 @@
 
  - (void)initData
 {
-    [self.searchViewModel fetchUsersInfo:self.searchTextString];
+    [self.searchUserViewModel fetchUsersInfo:self.searchTextString];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSArray *plistRecord = [defaults arrayForKey:@"historyRecord"];
     NSMutableArray *historyRecord = [NSMutableArray arrayWithArray:plistRecord];
@@ -92,7 +90,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.searchViewModel.totalCount;
+    return self.searchUserViewModel.totalCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
@@ -100,8 +98,8 @@
     LCYSearchUserCell *searchUserCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LCYSearchUserCell class]) forIndexPath:indexPath];
     searchUserCell.backgroundColor = [UIColor whiteColor];
     searchUserCell.selectionStyle = UITableViewScrollPositionNone;
-    if (self.searchViewModel.userInfo.count > indexPath.row) {
-        [searchUserCell updateWithModel:self.searchViewModel.userInfo[indexPath.row]];
+    if (self.searchUserViewModel.userInfo.count > indexPath.row) {
+        [searchUserCell updateWithModel:self.searchUserViewModel.userInfo[indexPath.row]];
     }
     return searchUserCell;
 }

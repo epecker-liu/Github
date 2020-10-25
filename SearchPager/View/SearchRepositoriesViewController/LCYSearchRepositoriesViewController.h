@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LCYSearchRepositoriesViewController : UIViewController
 
+- (void)setSearchText:(NSString *)searchText;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,7 +8,6 @@
 
 #import "MTLModel.h"
 #import <Mantle/Mantle.h>
-#import "LCYSearchUserModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

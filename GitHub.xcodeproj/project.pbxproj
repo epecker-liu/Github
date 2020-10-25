@@ -41,6 +41,10 @@
 		2BEB9E662542ABDD0022A2A6 /* LCYSearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E652542ABDD0022A2A6 /* LCYSearchUserViewController.m */; };
 		2BEB9E6B2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E6A2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m */; };
 		2BEB9E6F2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */; };
+		2BEB9E752545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E742545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m */; };
+		2BEB9EAD2545718F0022A2A6 /* LCYSearchRepositoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9EAC2545718F0022A2A6 /* LCYSearchRepositoriesModel.m */; };
+		2BEB9EB5254573280022A2A6 /* LCYSearchRepoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9EB4254573280022A2A6 /* LCYSearchRepoModel.m */; };
+		2BEB9EB8254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,14 @@
 		2BEB9E6A2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesViewController.m; sourceTree = "<group>"; };
 		2BEB9E6D2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesCell.h; sourceTree = "<group>"; };
 		2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesCell.m; sourceTree = "<group>"; };
+		2BEB9E732545217A0022A2A6 /* LCYSearchRepositoriesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesViewModel.h; sourceTree = "<group>"; };
+		2BEB9E742545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesViewModel.m; sourceTree = "<group>"; };
+		2BEB9EAB2545718F0022A2A6 /* LCYSearchRepositoriesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesModel.h; sourceTree = "<group>"; };
+		2BEB9EAC2545718F0022A2A6 /* LCYSearchRepositoriesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesModel.m; sourceTree = "<group>"; };
+		2BEB9EB3254573280022A2A6 /* LCYSearchRepoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepoModel.h; sourceTree = "<group>"; };
+		2BEB9EB4254573280022A2A6 /* LCYSearchRepoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepoModel.m; sourceTree = "<group>"; };
+		2BEB9EB6254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesOwnerModel.h; sourceTree = "<group>"; };
+		2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesOwnerModel.m; sourceTree = "<group>"; };
 		71A342FF9FE2E42FF0CA4235 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
 		8F31CDBA890AEF4FC4350AA9 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1513856F10589417BCFC80 /* libPods-GitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,15 +322,15 @@
 			path = RepoCellModel;
 			sourceTree = "<group>";
 		};
-		2BEB9E22253D7CA90022A2A6 /* SearchModel */ = {
+		2BEB9E22253D7CA90022A2A6 /* SearchUserModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E23253D7D1E0022A2A6 /* LCYSearchUserModel.h */,
-				2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */,
 				2BEB9E27253D7EF50022A2A6 /* LCYSearchModel.h */,
 				2BEB9E28253D7EF50022A2A6 /* LCYSearchModel.m */,
+				2BEB9E23253D7D1E0022A2A6 /* LCYSearchUserModel.h */,
+				2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */,
 			);
-			path = SearchModel;
+			path = SearchUserModel;
 			sourceTree = "<group>";
 		};
 		2BEB9E30253EB95C0022A2A6 /* UserModel */ = {
@@ -363,13 +375,13 @@
 		2BEB9E35253ED97B0022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9E42253FEDCB0022A2A6 /* SearchUserCellModel */,
 				2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCellModel */,
 				2BEB9E682542CA520022A2A6 /* SearchRepositoriesViewController */,
 				2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */,
 				2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCellModel */,
 				2BEB9E532540729F0022A2A6 /* HistoryCellModel */,
 				2BEB9E49254070120022A2A6 /* HistoryRecord */,
-				2BEB9E42253FEDCB0022A2A6 /* SearchUserCellModel */,
 				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
 				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
 			);
@@ -379,8 +391,8 @@
 		2BEB9E36253ED9890022A2A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9EB2254572800022A2A6 /* SearchModel */,
 				2BEB9E5725412CD30022A2A6 /* HistoryRecordModel */,
-				2BEB9E22253D7CA90022A2A6 /* SearchModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,6 +436,7 @@
 		2BEB9E3E253FDA8E0022A2A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9E72254521260022A2A6 /* SearchRepositoriesViewModel */,
 				2BEB9E672542C9CC0022A2A6 /* SearchUserViewModel */,
 				2BEB9E5B2541305C0022A2A6 /* HistoryRecordViewModel */,
 			);
@@ -518,6 +531,37 @@
 				2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */,
 			);
 			path = SearchRepositoriesCellModel;
+			sourceTree = "<group>";
+		};
+		2BEB9E72254521260022A2A6 /* SearchRepositoriesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E732545217A0022A2A6 /* LCYSearchRepositoriesViewModel.h */,
+				2BEB9E742545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m */,
+			);
+			path = SearchRepositoriesViewModel;
+			sourceTree = "<group>";
+		};
+		2BEB9EAE254571AF0022A2A6 /* SearchRepositoriesModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9EB3254573280022A2A6 /* LCYSearchRepoModel.h */,
+				2BEB9EB4254573280022A2A6 /* LCYSearchRepoModel.m */,
+				2BEB9EAB2545718F0022A2A6 /* LCYSearchRepositoriesModel.h */,
+				2BEB9EAC2545718F0022A2A6 /* LCYSearchRepositoriesModel.m */,
+				2BEB9EB6254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.h */,
+				2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m */,
+			);
+			path = SearchRepositoriesModel;
+			sourceTree = "<group>";
+		};
+		2BEB9EB2254572800022A2A6 /* SearchModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9EAE254571AF0022A2A6 /* SearchRepositoriesModel */,
+				2BEB9E22253D7CA90022A2A6 /* SearchUserModel */,
+			);
+			path = SearchModel;
 			sourceTree = "<group>";
 		};
 		473E2CCD5DB5FA65213E43EF /* Frameworks */ = {
@@ -729,6 +773,7 @@
 				2BEB9E622541C80D0022A2A6 /* LCYSearchOptionsCell.m in Sources */,
 				2BEB9D872530462D0022A2A6 /* LCYSearchViewController.m in Sources */,
 				2BEB9DE52533F7210022A2A6 /* LCYFetchNetDataService.m in Sources */,
+				2BEB9E752545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m in Sources */,
 				2BEB9E5A25412D190022A2A6 /* LCYHistoryRecordModel.m in Sources */,
 				2BEB9D2D2528507F0022A2A6 /* SceneDelegate.m in Sources */,
 				2BEB9DF825357DC10022A2A6 /* LCYShowRepositoriesViewController.m in Sources */,
@@ -736,8 +781,11 @@
 				2BEB9D80253045280022A2A6 /* LCYNotificationViewController.m in Sources */,
 				2BEB9E41253FDBC90022A2A6 /* LCYSearchUserViewModel.m in Sources */,
 				2BEB9D7C253040980022A2A6 /* LCYHomePagerViewController.m in Sources */,
+				2BEB9EB8254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m in Sources */,
 				2BEB9E25253D7D1E0022A2A6 /* LCYSearchUserModel.m in Sources */,
 				2BEB9DFC25359FEE0022A2A6 /* LCYRepoCell.m in Sources */,
+				2BEB9EAD2545718F0022A2A6 /* LCYSearchRepositoriesModel.m in Sources */,
+				2BEB9EB5254573280022A2A6 /* LCYSearchRepoModel.m in Sources */,
 				2BEB9D60252851410022A2A6 /* LCYLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
