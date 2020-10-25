@@ -120,18 +120,19 @@
 {
     if (self.searchRepositoriesViewModel.repositoriesInfo.count > indexPath.row) {
         LCYSearchRepositoriesModel *curModel = self.searchRepositoriesViewModel.repositoriesInfo[indexPath.row];
-        return CGSizeMake(self.view.bounds.size.width, [self heightForString:curModel.descriptionRepositories fontSize:14 andWidth:self.view.bounds.size.width]);
+        return CGSizeMake(self.view.bounds.size.width,
+                          [self heightForString:curModel.descriptionRepositories fontSize:14 andWidth:self.view.bounds.size.width]);
+        
     }
     return CGSizeMake(self.view.bounds.size.width, 50);
 }
 
-
 - (float) heightForString:(NSString *)value fontSize: (float)fontSize andWidth:(float)width
 {
-   CGSize sizeToFit = [value sizeWithFont:[UIFont systemFontOfSize:fontSize]
-                   constrainedToSize:CGSizeMake(width -16.0, CGFLOAT_MAX)
-                       lineBreakMode:NSLineBreakByWordWrapping];
-    return sizeToFit.height + 52.0;
+    CGSize infoSize = CGSizeMake(self.view.frame.size.width, 1000);
+    NSDictionary *dic = @{NSFontAttributeName : [UIFont systemFontOfSize:17.f ]};
+    CGRect infoRect =   [value boundingRectWithSize:infoSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:nil];
+    return ceil(infoRect.size.height) + 52.0;
 }
 
 @end

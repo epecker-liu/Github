@@ -63,11 +63,22 @@
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             self.historyRecordViewModel.historyRecordModel.historyRecordArray = [defaults arrayForKey:@"historyRecord"];
             [self.historyRecordTableView reloadData];
+            self.historyRecordTableView.alpha = 0;
+            self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 2, 2);
+            [UIView animateWithDuration:0.5 animations:^{
+                self.historyRecordTableView.alpha = 1;
+                self.historyRecordTableView.transform = CGAffineTransformIdentity;
+            }];
             self.historyRecordTableView.hidden = NO;
             self.searchOptionsTableView.hidden = YES;
             return @"black";
         } else {
-//            [self.historyRecordTableView removeFromSuperview];
+            self.searchOptionsTableView.alpha = 0;
+            self.searchOptionsTableView.transform = CGAffineTransformScale(self.searchOptionsTableView.transform, 2, 2);
+            [UIView animateWithDuration:0.5 animations:^{
+                self.searchOptionsTableView.alpha = 1;
+                self.searchOptionsTableView.transform = CGAffineTransformIdentity;
+            }];
             self.historyRecordTableView.hidden = YES;
             self.searchOptionsTableView.hidden = NO;
             [self.searchOptionsTableView reloadData];
@@ -180,30 +191,6 @@
     }
     return nil;
 }
-
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    if ([tableView isEqual:self.historyRecordTableView]) {
-//        return @"近期搜索";
-//    } else {
-//        return nil;
-//    }
-//}
-
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    if ([tableView isEqual:self.historyRecordTableView]) {
-//        UILabel *myLabel = [[UILabel alloc] init];
-//        myLabel.frame = CGRectMake(20, 0, 320, 25);
-//        myLabel.font = [UIFont boldSystemFontOfSize:24];
-//        myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
-//        UIView *headerView = [[UIView alloc] init];
-//        [headerView addSubview:myLabel];
-//        return headerView;
-//    } else {
-//        return nil;
-//    }
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
