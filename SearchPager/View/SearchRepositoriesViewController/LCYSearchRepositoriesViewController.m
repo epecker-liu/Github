@@ -62,7 +62,8 @@
     [historyRecord removeObject:self.searchTextString];
     [historyRecord addObject:self.searchTextString];
     //持久化
-    [defaults setObject:historyRecord forKey:@"historyRecord"];
+    NSArray* reversedArray = [[historyRecord reverseObjectEnumerator] allObjects];
+    [defaults setObject:reversedArray forKey:@"historyRecord"];
     [defaults synchronize];
 }
 
@@ -78,7 +79,7 @@
     //    [self.searchRepositoriesCollectionView registerClass:[LCYSearchRepositoriesCell class] forCellWithReuseIdentifier:[LCYSearchRepositoriesCell class]];
     [self.searchRepositoriesCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
     [self.searchRepositoriesCollectionView mas_updateConstraints:^ (MASConstraintMaker *make) {
-        make.top.equalTo(self.view).mas_offset(90);
+        make.top.equalTo(self.view);
         make.bottom.mas_equalTo(self.view);
         make.width.mas_equalTo(self.view.mas_width);
         make.centerX.mas_equalTo(self.view);
@@ -97,7 +98,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.searchRepositoriesViewModel.totalCount;
+    return self.searchRepositoriesViewModel.repositoriesInfo.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
@@ -106,6 +107,7 @@
     cell.backgroundColor = [UIColor whiteColor];
     if (self.searchRepositoriesViewModel.repositoriesInfo.count > indexPath.row) {
         [cell updateWithModel:self.searchRepositoriesViewModel.repositoriesInfo[indexPath.row]];
+        NSLog(@"indexPath.row = %lu", indexPath.row);
     }
     return cell;
 }

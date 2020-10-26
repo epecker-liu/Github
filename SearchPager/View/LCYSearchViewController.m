@@ -74,10 +74,10 @@
             return [UIColor yellowColor];
         } else if (value.length == 1){
             self.historyRecordTableView.alpha = 1;
-            self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 2, 2);
+            self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 1, 1);
             [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 self.historyRecordTableView.alpha = 0;
-                self.historyRecordTableView.transform = CGAffineTransformIdentity;
+                self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 0.5, 0.5);
             } completion:false];
             self.searchOptionsTableView.alpha = 0;
             self.searchOptionsTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 0.5, 0.5);
@@ -89,6 +89,8 @@
             [self.searchOptionsTableView reloadData];
             return [UIColor greenColor];
         } else {
+            self.searchOptionsTableView.hidden = NO;
+            self.historyRecordTableView.hidden = YES;
             [self.searchOptionsTableView reloadData];
             return [UIColor blueColor];
         }

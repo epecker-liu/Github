@@ -29,7 +29,7 @@
     [self bindViewModel];
     [self initData];
     [self initUI];
-    [self.searchUserViewModel fetchUsersInfo:self.searchTextString];
+//    [self.searchUserViewModel fetchUsersInfo:self.searchTextString];
 }
 
 - (void)setSearchText:(NSString *)searchText
@@ -85,7 +85,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.searchUserViewModel.totalCount;
+    return self.searchUserViewModel.userInfo.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
