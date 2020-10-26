@@ -33,7 +33,6 @@ static NSString *const kSearchAPIString = @"https://api.github.com/search/users?
 {
     __weak typeof(self) weakSelf = self;
     NSString *searchURLString = [NSString stringWithFormat:kSearchAPIString, para];
-    NSLog(@"search url is %@", searchURLString);
     [self.fetchNetDataService fetchDataFromURL:searchURLString completion:^ (NSMutableArray * _Nonnull data, NSError * _Nonnull err){
         if (err) {
             NSLog(@"fail");

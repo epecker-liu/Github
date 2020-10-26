@@ -41,10 +41,6 @@
 {
     @weakify(self);
     [RACObserve(self.searchRepositoriesViewModel, repositoriesInfo) subscribeNext:^ (id x){
-        NSLog(@"observe search data success!");
-        NSLog(@"userinfo ---- %@", self.searchRepositoriesViewModel.repositoriesInfo);
-        NSLog(@"userinfo in fact have %lu array", self.searchRepositoriesViewModel.repositoriesInfo.count);
-        NSLog(@"userinfo totalcount --- %lu", self.searchRepositoriesViewModel.totalCount);
         @strongify(self);
         [self.searchRepositoriesCollectionView reloadData];
     }];
@@ -68,7 +64,6 @@
     //持久化
     [defaults setObject:historyRecord forKey:@"historyRecord"];
     [defaults synchronize];
-    NSLog(@"plist ---- -%@", [defaults arrayForKey:@"historyRecord"]);    // test 完成后删除
 }
 
 - (void)initUI

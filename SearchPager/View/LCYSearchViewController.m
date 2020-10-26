@@ -71,8 +71,8 @@
             }];
             self.historyRecordTableView.hidden = NO;
             self.searchOptionsTableView.hidden = YES;
-            return @"black";
-        } else {
+            return [UIColor yellowColor];
+        } else if (value.length == 1){
             self.historyRecordTableView.alpha = 1;
             self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 2, 2);
             [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
@@ -81,16 +81,19 @@
             } completion:false];
             self.searchOptionsTableView.alpha = 0;
             self.searchOptionsTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 0.5, 0.5);
-            [UIView animateWithDuration:0.5 delay:1 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 self.searchOptionsTableView.alpha = 1;
                 self.searchOptionsTableView.transform = CGAffineTransformIdentity;
             } completion:false];
             self.searchOptionsTableView.hidden = NO;
             [self.searchOptionsTableView reloadData];
-            return @"green";
+            return [UIColor greenColor];
+        } else {
+            [self.searchOptionsTableView reloadData];
+            return [UIColor blueColor];
         }
-    }] subscribeNext:^(NSString *value){
-        NSLog(@"the backcolor is -- %@", value);
+    }] subscribeNext:^(UIColor *value){
+        self.searchTextField.backgroundColor = value;
     }];
 }
 
@@ -164,7 +167,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if([tableView isEqual:self.historyRecordTableView]) {
-        NSLog(@"the number of count === %lu", self.historyRecordViewModel.historyRecordModel.historyRecordArray.count);
         return self.historyRecordViewModel.historyRecordModel.historyRecordArray.count;
     } else if ([tableView isEqual:self.searchOptionsTableView]) {
         return 5;
@@ -180,8 +182,6 @@
         historyRecordCell.selectionStyle = UITableViewScrollPositionNone;
         if (self.historyRecordViewModel.historyRecordModel.historyRecordArray.count > indexPath.row) {
             [historyRecordCell updateWithPlist:self.historyRecordViewModel.historyRecordModel.historyRecordArray[indexPath.row]];
-            NSLog(@"label --- %@", self.historyRecordViewModel.historyRecordModel.historyRecordArray[indexPath.row]);
-//            NSLog(@"label - text ----- %@", historyRecordCell.historyRecordLabel.text);
         }
         return historyRecordCell;
     } else if ([tableView isEqual:self.searchOptionsTableView]) {
@@ -190,7 +190,6 @@
         searchOptionsCell.selectionStyle = UITableViewScrollPositionNone;
         if (5 > indexPath.row) {
             [searchOptionsCell updateWithString:self.searchTextField.text indexPath:indexPath.row];
-            NSLog(@"self text === %@",self.searchTextField.text);
         }
         return searchOptionsCell;
     }

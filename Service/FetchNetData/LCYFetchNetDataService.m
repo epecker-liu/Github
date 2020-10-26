@@ -26,7 +26,6 @@
     NSError *error;
     [manger GET:path parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject){
             if (completion) {
-                NSLog(@"success");
                 completion(responseObject, nil);
             }
         } failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {

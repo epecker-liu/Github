@@ -44,7 +44,6 @@
 {
     @weakify(self);
     [RACObserve(self.fetchRepositoriesViewModel, repositoriesList) subscribeNext:^ (id x){
-        NSLog(@"observe success!");
         @strongify(self);
         [self.repositoriesTableView reloadData];
     }];
@@ -138,7 +137,6 @@
 
 - (void)edit
 {
-    NSLog(@"edit button!");
     [self.repositoriesTableView setEditing:!self.repositoriesTableView.editing];
 }
 

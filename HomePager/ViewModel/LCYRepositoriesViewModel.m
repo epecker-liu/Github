@@ -41,7 +41,6 @@ static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-
                 LCYItemModel *githubProjectName = [MTLJSONAdapter modelOfClass:[LCYItemModel class] fromJSONDictionary:data[i] error:nil];
                 [repositoriesList addObject:githubProjectName];
             }
-            NSLog(@"-----%@", repositoriesList);
             weakSelf.repositoriesList = repositoriesList;
         }
     }];

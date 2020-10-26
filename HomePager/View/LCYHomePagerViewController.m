@@ -193,7 +193,6 @@
         LCYShowRepositoriesViewController *showRepofNetViewController = [[LCYShowRepositoriesViewController alloc] init];
         [self.navigationController pushViewController:showRepofNetViewController animated:YES];
     } else {
-        NSLog(@"tag not found!");
     }
 }
 
