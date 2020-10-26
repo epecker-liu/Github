@@ -60,10 +60,11 @@
     NSMutableArray *historyRecord = [NSMutableArray arrayWithArray:plistRecord];
     //去重
     [historyRecord removeObject:self.searchTextString];
-    [historyRecord addObject:self.searchTextString];
     //持久化
-    NSArray* reversedArray = [[historyRecord reverseObjectEnumerator] allObjects];
-    [defaults setObject:reversedArray forKey:@"historyRecord"];
+    NSMutableArray* reversedArray = [[historyRecord reverseObjectEnumerator] allObjects];
+    [reversedArray addObject:self.searchTextString];
+    historyRecord = [[reversedArray reverseObjectEnumerator] allObjects];
+    [defaults setObject:historyRecord forKey:@"historyRecord"];
     [defaults synchronize];
 }
 

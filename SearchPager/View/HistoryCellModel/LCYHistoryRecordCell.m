@@ -33,6 +33,7 @@
 
 - (void)initSubView{
     self.historyRecordLabel = [[UILabel alloc] init];
+    self.historyRecordLabel.font = [UIFont systemFontOfSize:20];
     [self.contentView addSubview:self.historyRecordLabel];
     [self.historyRecordLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.contentView.mas_left).offset(20);

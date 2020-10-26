@@ -16,7 +16,6 @@
 #import "LCYSearchUserCell.h"
 #import "LCYHistoryRecordModel.h"
 #import "LCYHistoryRecordViewModel.h"
-#import "LCYHistoryRecordView.h"
 #import <NSUserDefaults+RACSupport.h>
 #import "LCYHistoryRecordCell.h"
 #import "LCYHistoryRecordModel.h"
@@ -29,7 +28,6 @@
 @interface LCYSearchViewController ()
 
 @property (nonatomic, strong) UITextField *searchTextField;
-//@property (nonatomic, strong) UIButton *searchButton;
 @property (nonatomic, strong) LCYSearchUserViewModel *searchViewModel;
 @property (nonatomic, strong) NSMutableArray *temp;
 @property (nonatomic, strong) UITableView *searchTableView;
@@ -120,11 +118,11 @@
     
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.text = @"近期搜索";
-    [self.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
+    [self.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:25]];
     [self.view addSubview:self.titleLabel];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left).offset(20);
-        make.top.mas_equalTo(self.searchTextField.mas_bottom).offset(10);
+        make.top.mas_equalTo(self.searchTextField.mas_bottom).mas_offset(15);
     }];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -160,7 +158,7 @@
         make.top.equalTo(self.view.mas_top).mas_offset(180);
         make.centerX.equalTo(self.view.mas_centerX);
         make.width.equalTo(self.view.mas_width);
-        make.height.mas_equalTo(self.view.mas_height);
+        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-50);
     }];
 }
 

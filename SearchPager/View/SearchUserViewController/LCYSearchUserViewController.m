@@ -57,7 +57,10 @@
     //去重
     [historyRecord removeObject:self.searchTextString];
     [historyRecord addObject:self.searchTextString];
+    NSMutableArray* reversedArray = [[historyRecord reverseObjectEnumerator] allObjects];
     //持久化
+    [reversedArray addObject:self.searchTextString];
+    historyRecord = [[reversedArray reverseObjectEnumerator] allObjects];
     [defaults setObject:historyRecord forKey:@"historyRecord"];
     [defaults synchronize];
 }
