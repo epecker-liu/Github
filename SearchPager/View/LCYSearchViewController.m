@@ -64,7 +64,7 @@
             self.historyRecordViewModel.historyRecordModel.historyRecordArray = [defaults arrayForKey:@"historyRecord"];
             [self.historyRecordTableView reloadData];
             self.historyRecordTableView.alpha = 0;
-            self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 2, 2);
+            self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 0.5, 0.5);
             [UIView animateWithDuration:0.5 animations:^{
                 self.historyRecordTableView.alpha = 1;
                 self.historyRecordTableView.transform = CGAffineTransformIdentity;
@@ -73,13 +73,18 @@
             self.searchOptionsTableView.hidden = YES;
             return @"black";
         } else {
+            self.historyRecordTableView.alpha = 1;
+            self.historyRecordTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 2, 2);
+            [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                self.historyRecordTableView.alpha = 0;
+                self.historyRecordTableView.transform = CGAffineTransformIdentity;
+            } completion:false];
             self.searchOptionsTableView.alpha = 0;
-            self.searchOptionsTableView.transform = CGAffineTransformScale(self.searchOptionsTableView.transform, 2, 2);
-            [UIView animateWithDuration:0.5 animations:^{
+            self.searchOptionsTableView.transform = CGAffineTransformScale(self.historyRecordTableView.transform, 0.5, 0.5);
+            [UIView animateWithDuration:0.5 delay:1 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 self.searchOptionsTableView.alpha = 1;
                 self.searchOptionsTableView.transform = CGAffineTransformIdentity;
-            }];
-            self.historyRecordTableView.hidden = YES;
+            } completion:false];
             self.searchOptionsTableView.hidden = NO;
             [self.searchOptionsTableView reloadData];
             return @"green";
@@ -150,7 +155,7 @@
         make.top.equalTo(self.view.mas_top).mas_offset(180);
         make.centerX.equalTo(self.view.mas_centerX);
         make.width.equalTo(self.view.mas_width);
-        make.bottom.mas_equalTo(self.view);
+        make.height.mas_equalTo(self.view.mas_height);
     }];
 }
 
