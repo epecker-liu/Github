@@ -44,7 +44,8 @@
 		2BEB9E752545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9E742545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m */; };
 		2BEB9EAD2545718F0022A2A6 /* LCYSearchRepositoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9EAC2545718F0022A2A6 /* LCYSearchRepositoriesModel.m */; };
 		2BEB9EB5254573280022A2A6 /* LCYSearchRepoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9EB4254573280022A2A6 /* LCYSearchRepoModel.m */; };
-		2BEB9EB8254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m */; };
+		2BEB9EB8254573C20022A2A6 /* LCYSearchRepositoriesUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesUserModel.m */; };
+		2BEB9ED3254710B40022A2A6 /* LCYSearchOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB9ED2254710B40022A2A6 /* LCYSearchOptionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0F78632547CE3700FF13FE /* LCYprotocolDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYprotocolDelegate.h; sourceTree = "<group>"; };
 		2BEB9D252528507F0022A2A6 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB9D282528507F0022A2A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BEB9D292528507F0022A2A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,8 +139,11 @@
 		2BEB9EAC2545718F0022A2A6 /* LCYSearchRepositoriesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesModel.m; sourceTree = "<group>"; };
 		2BEB9EB3254573280022A2A6 /* LCYSearchRepoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepoModel.h; sourceTree = "<group>"; };
 		2BEB9EB4254573280022A2A6 /* LCYSearchRepoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepoModel.m; sourceTree = "<group>"; };
-		2BEB9EB6254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesOwnerModel.h; sourceTree = "<group>"; };
-		2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesOwnerModel.m; sourceTree = "<group>"; };
+		2BEB9EB6254573C20022A2A6 /* LCYSearchRepositoriesUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchRepositoriesUserModel.h; sourceTree = "<group>"; };
+		2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchRepositoriesUserModel.m; sourceTree = "<group>"; };
+		2BEB9EC0254704510022A2A6 /* LCYConstValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYConstValue.h; sourceTree = "<group>"; };
+		2BEB9ED1254710B40022A2A6 /* LCYSearchOptionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchOptionView.h; sourceTree = "<group>"; };
+		2BEB9ED2254710B40022A2A6 /* LCYSearchOptionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCYSearchOptionView.m; sourceTree = "<group>"; };
 		71A342FF9FE2E42FF0CA4235 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
 		8F31CDBA890AEF4FC4350AA9 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1513856F10589417BCFC80 /* libPods-GitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +178,8 @@
 		2BEB9D1C2528507F0022A2A6 = {
 			isa = PBXGroup;
 			children = (
+				2B0F78632547CE3700FF13FE /* LCYprotocolDelegate.h */,
+				2BEB9EC0254704510022A2A6 /* LCYConstValue.h */,
 				2BEB9E3A253EDAD20022A2A6 /* Service */,
 				2BEB9D81253045D50022A2A6 /* SearchPager */,
 				2BEB9D5D252850FF0022A2A6 /* Logindisplay */,
@@ -236,6 +243,8 @@
 		2BEB9D5D252850FF0022A2A6 /* Logindisplay */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9D5E252851410022A2A6 /* LCYLoginViewController.h */,
+				2BEB9D5F252851410022A2A6 /* LCYLoginViewController.m */,
 				2BEB9E37253ED9DB0022A2A6 /* View */,
 			);
 			path = Logindisplay;
@@ -261,6 +270,8 @@
 		2BEB9D79253040530022A2A6 /* HomePager */ = {
 			isa = PBXGroup;
 			children = (
+				2BEB9D7A253040980022A2A6 /* LCYHomePagerViewController.h */,
+				2BEB9D7B253040980022A2A6 /* LCYHomePagerViewController.m */,
 				2BEB9E34253ED9490022A2A6 /* Model */,
 				2BEB9E32253ED8190022A2A6 /* ViewModel */,
 				2BEB9E31253ED7BC0022A2A6 /* View */,
@@ -279,9 +290,10 @@
 		2BEB9D81253045D50022A2A6 /* SearchPager */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E3E253FDA8E0022A2A6 /* ViewModel */,
-				2BEB9E36253ED9890022A2A6 /* Model */,
-				2BEB9E35253ED97B0022A2A6 /* View */,
+				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
+				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
+				2BEB9EB2254572800022A2A6 /* SearchModel */,
+				2BEB9EC325470DEE0022A2A6 /* Module */,
 			);
 			path = SearchPager;
 			sourceTree = "<group>";
@@ -313,13 +325,13 @@
 			path = ShowRepoController;
 			sourceTree = "<group>";
 		};
-		2BEB9DF925359F8B0022A2A6 /* RepoCellModel */ = {
+		2BEB9DF925359F8B0022A2A6 /* RepoCell */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9DFA25359FEE0022A2A6 /* LCYRepoCell.h */,
 				2BEB9DFB25359FEE0022A2A6 /* LCYRepoCell.m */,
 			);
-			path = RepoCellModel;
+			path = RepoCell;
 			sourceTree = "<group>";
 		};
 		2BEB9E22253D7CA90022A2A6 /* SearchUserModel */ = {
@@ -347,9 +359,7 @@
 		2BEB9E31253ED7BC0022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9DF925359F8B0022A2A6 /* RepoCellModel */,
-				2BEB9D7A253040980022A2A6 /* LCYHomePagerViewController.h */,
-				2BEB9D7B253040980022A2A6 /* LCYHomePagerViewController.m */,
+				2BEB9DF925359F8B0022A2A6 /* RepoCell */,
 				2BEB9DF525357D6A0022A2A6 /* ShowRepoController */,
 			);
 			path = View;
@@ -372,26 +382,9 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2BEB9E35253ED97B0022A2A6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB9E42253FEDCB0022A2A6 /* SearchUserCellModel */,
-				2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCellModel */,
-				2BEB9E682542CA520022A2A6 /* SearchRepositoriesViewController */,
-				2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */,
-				2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCellModel */,
-				2BEB9E532540729F0022A2A6 /* HistoryCellModel */,
-				2BEB9E49254070120022A2A6 /* HistoryRecord */,
-				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
-				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2BEB9E36253ED9890022A2A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9EB2254572800022A2A6 /* SearchModel */,
 				2BEB9E5725412CD30022A2A6 /* HistoryRecordModel */,
 			);
 			path = Model;
@@ -400,8 +393,6 @@
 		2BEB9E37253ED9DB0022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9D5E252851410022A2A6 /* LCYLoginViewController.h */,
-				2BEB9D5F252851410022A2A6 /* LCYLoginViewController.m */,
 				2BEB9D652528E32F0022A2A6 /* LoginAlertView */,
 			);
 			path = View;
@@ -436,38 +427,27 @@
 		2BEB9E3E253FDA8E0022A2A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E72254521260022A2A6 /* SearchRepositoriesViewModel */,
-				2BEB9E672542C9CC0022A2A6 /* SearchUserViewModel */,
 				2BEB9E5B2541305C0022A2A6 /* HistoryRecordViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2BEB9E42253FEDCB0022A2A6 /* SearchUserCellModel */ = {
+		2BEB9E42253FEDCB0022A2A6 /* SearchUserCell */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E4625400F540022A2A6 /* LCYSearchUserCell.h */,
 				2BEB9E4725400F540022A2A6 /* LCYSearchUserCell.m */,
 			);
-			path = SearchUserCellModel;
+			path = SearchUserCell;
 			sourceTree = "<group>";
 		};
-		2BEB9E49254070120022A2A6 /* HistoryRecord */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB9E4D254070E80022A2A6 /* LCYHistoryRecordView.h */,
-				2BEB9E4E254070E80022A2A6 /* LCYHistoryRecordView.m */,
-			);
-			path = HistoryRecord;
-			sourceTree = "<group>";
-		};
-		2BEB9E532540729F0022A2A6 /* HistoryCellModel */ = {
+		2BEB9E532540729F0022A2A6 /* HistoryCell */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E54254072C20022A2A6 /* LCYHistoryRecordCell.h */,
 				2BEB9E55254072C20022A2A6 /* LCYHistoryRecordCell.m */,
 			);
-			path = HistoryCellModel;
+			path = HistoryCell;
 			sourceTree = "<group>";
 		};
 		2BEB9E5725412CD30022A2A6 /* HistoryRecordModel */ = {
@@ -488,13 +468,13 @@
 			path = HistoryRecordViewModel;
 			sourceTree = "<group>";
 		};
-		2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCellModel */ = {
+		2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCell */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E602541C80D0022A2A6 /* LCYSearchOptionsCell.h */,
 				2BEB9E612541C80D0022A2A6 /* LCYSearchOptionsCell.m */,
 			);
-			path = SearchOptionsCellModel;
+			path = SearchOptionsCell;
 			sourceTree = "<group>";
 		};
 		2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */ = {
@@ -524,13 +504,13 @@
 			path = SearchRepositoriesViewController;
 			sourceTree = "<group>";
 		};
-		2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCellModel */ = {
+		2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCell */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E6D2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.h */,
 				2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */,
 			);
-			path = SearchRepositoriesCellModel;
+			path = SearchRepositoriesCell;
 			sourceTree = "<group>";
 		};
 		2BEB9E72254521260022A2A6 /* SearchRepositoriesViewModel */ = {
@@ -549,8 +529,8 @@
 				2BEB9EB4254573280022A2A6 /* LCYSearchRepoModel.m */,
 				2BEB9EAB2545718F0022A2A6 /* LCYSearchRepositoriesModel.h */,
 				2BEB9EAC2545718F0022A2A6 /* LCYSearchRepositoriesModel.m */,
-				2BEB9EB6254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.h */,
-				2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m */,
+				2BEB9EB6254573C20022A2A6 /* LCYSearchRepositoriesUserModel.h */,
+				2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesUserModel.m */,
 			);
 			path = SearchRepositoriesModel;
 			sourceTree = "<group>";
@@ -558,10 +538,119 @@
 		2BEB9EB2254572800022A2A6 /* SearchModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9EAE254571AF0022A2A6 /* SearchRepositoriesModel */,
-				2BEB9E22253D7CA90022A2A6 /* SearchUserModel */,
 			);
 			path = SearchModel;
+			sourceTree = "<group>";
+		};
+		2BEB9EC325470DEE0022A2A6 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9ECC25470F350022A2A6 /* SearchOption */,
+				2BEB9EC725470E660022A2A6 /* HistoryRecord */,
+				2BEB9EC425470E0C0022A2A6 /* Search */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2BEB9EC425470E0C0022A2A6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9ECA25470EF90022A2A6 /* View */,
+				2BEB9EC625470E510022A2A6 /* ViewModel */,
+				2BEB9EC525470E290022A2A6 /* Model */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2BEB9EC525470E290022A2A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E22253D7CA90022A2A6 /* SearchUserModel */,
+				2BEB9EAE254571AF0022A2A6 /* SearchRepositoriesModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BEB9EC625470E510022A2A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E672542C9CC0022A2A6 /* SearchUserViewModel */,
+				2BEB9E72254521260022A2A6 /* SearchRepositoriesViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BEB9EC725470E660022A2A6 /* HistoryRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9EC825470EB60022A2A6 /* View */,
+				2BEB9E36253ED9890022A2A6 /* Model */,
+				2BEB9E3E253FDA8E0022A2A6 /* ViewModel */,
+			);
+			path = HistoryRecord;
+			sourceTree = "<group>";
+		};
+		2BEB9EC825470EB60022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E4D254070E80022A2A6 /* LCYHistoryRecordView.h */,
+				2BEB9E4E254070E80022A2A6 /* LCYHistoryRecordView.m */,
+				2BEB9EC925470EDE0022A2A6 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BEB9EC925470EDE0022A2A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E532540729F0022A2A6 /* HistoryCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2BEB9ECA25470EF90022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */,
+				2BEB9E682542CA520022A2A6 /* SearchRepositoriesViewController */,
+				2BEB9ECB25470F050022A2A6 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BEB9ECB25470F050022A2A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCell */,
+				2BEB9E42253FEDCB0022A2A6 /* SearchUserCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2BEB9ECC25470F350022A2A6 /* SearchOption */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9ED1254710B40022A2A6 /* LCYSearchOptionView.h */,
+				2BEB9ED2254710B40022A2A6 /* LCYSearchOptionView.m */,
+				2BEB9ECE25470F5E0022A2A6 /* View */,
+			);
+			path = SearchOption;
+			sourceTree = "<group>";
+		};
+		2BEB9ECD25470F490022A2A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2BEB9ECE25470F5E0022A2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9ECD25470F490022A2A6 /* Cell */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		473E2CCD5DB5FA65213E43EF /* Frameworks */ = {
@@ -781,12 +870,13 @@
 				2BEB9D80253045280022A2A6 /* LCYNotificationViewController.m in Sources */,
 				2BEB9E41253FDBC90022A2A6 /* LCYSearchUserViewModel.m in Sources */,
 				2BEB9D7C253040980022A2A6 /* LCYHomePagerViewController.m in Sources */,
-				2BEB9EB8254573C20022A2A6 /* LCYSearchRepositoriesOwnerModel.m in Sources */,
+				2BEB9EB8254573C20022A2A6 /* LCYSearchRepositoriesUserModel.m in Sources */,
 				2BEB9E25253D7D1E0022A2A6 /* LCYSearchUserModel.m in Sources */,
 				2BEB9DFC25359FEE0022A2A6 /* LCYRepoCell.m in Sources */,
 				2BEB9EAD2545718F0022A2A6 /* LCYSearchRepositoriesModel.m in Sources */,
 				2BEB9EB5254573280022A2A6 /* LCYSearchRepoModel.m in Sources */,
 				2BEB9D60252851410022A2A6 /* LCYLoginViewController.m in Sources */,
+				2BEB9ED3254710B40022A2A6 /* LCYSearchOptionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

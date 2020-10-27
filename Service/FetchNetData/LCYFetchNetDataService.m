@@ -35,4 +35,22 @@
         }];
 }
 
+//- (void)fetchDataFromURL:(NSString *)url modelClass:(Class)modelClass completion:(LCYNetworkFetchDataCompletion)completion
+//{
+//    NSMutableArray *repositoriesList = [[NSMutableArray alloc] init];
+//    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
+//    NSString *path = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+//    NSError *error;
+//    [manger GET:path parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject){
+//            if (completion) {
+//                id searchModel = [MTLJSONAdapter modelOfClass:[modelClass class] fromJSONDictionary:responseObject error:nil];
+//                completion(searchModel, nil);
+//            }
+//        } failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
+//            if (completion) {
+//                completion(nil, error);
+//            }
+//        }];
+//}
+
 @end

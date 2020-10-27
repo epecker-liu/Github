@@ -12,7 +12,7 @@
 #import "LCYRepoCell.h"
 #import "LCYMyWorkData.h"
 #import <MJRefresh/MJRefresh.h>
-#import <MTLModel.h>
+#import <Mantle/MTLModel.h>
 #import "LCYItemModel.h"
 #import <SDWebImage/SDWebImage.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
