@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LCYprotocolDelegate.h"
+#import "LCYSearchDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LCYSearchOptionView : UIView <LCYprotocolDelegate>
-
-@property(nonatomic, weak) id<LCYprotocolDelegate> delegate;
+@interface LCYSearchOptionView : UIView <LCYSearchDelegate>
 
 - (void)updateSearchString:(NSString *)searchString;
+
+@property(nonatomic, weak) id<LCYSearchDelegate> delegate;
 
 @end
 

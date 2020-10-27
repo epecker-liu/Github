@@ -66,7 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B0F78632547CE3700FF13FE /* LCYprotocolDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYprotocolDelegate.h; sourceTree = "<group>"; };
+		2B0F78632547CE3700FF13FE /* LCYSearchDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCYSearchDelegate.h; sourceTree = "<group>"; };
 		2BEB9D252528507F0022A2A6 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB9D282528507F0022A2A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BEB9D292528507F0022A2A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,11 +175,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0F786425482B8000FF13FE /* Untils */ = {
+			isa = PBXGroup;
+			children = (
+				2BEB9EC0254704510022A2A6 /* LCYConstValue.h */,
+			);
+			path = Untils;
+			sourceTree = "<group>";
+		};
 		2BEB9D1C2528507F0022A2A6 = {
 			isa = PBXGroup;
 			children = (
-				2B0F78632547CE3700FF13FE /* LCYprotocolDelegate.h */,
-				2BEB9EC0254704510022A2A6 /* LCYConstValue.h */,
+				2B0F786425482B8000FF13FE /* Untils */,
 				2BEB9E3A253EDAD20022A2A6 /* Service */,
 				2BEB9D81253045D50022A2A6 /* SearchPager */,
 				2BEB9D5D252850FF0022A2A6 /* Logindisplay */,
@@ -290,9 +297,9 @@
 		2BEB9D81253045D50022A2A6 /* SearchPager */ = {
 			isa = PBXGroup;
 			children = (
+				2B0F78632547CE3700FF13FE /* LCYSearchDelegate.h */,
 				2BEB9D852530462D0022A2A6 /* LCYSearchViewController.h */,
 				2BEB9D862530462D0022A2A6 /* LCYSearchViewController.m */,
-				2BEB9EB2254572800022A2A6 /* SearchModel */,
 				2BEB9EC325470DEE0022A2A6 /* Module */,
 			);
 			path = SearchPager;
@@ -334,7 +341,7 @@
 			path = RepoCell;
 			sourceTree = "<group>";
 		};
-		2BEB9E22253D7CA90022A2A6 /* SearchUserModel */ = {
+		2BEB9E22253D7CA90022A2A6 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E27253D7EF50022A2A6 /* LCYSearchModel.h */,
@@ -342,7 +349,7 @@
 				2BEB9E23253D7D1E0022A2A6 /* LCYSearchUserModel.h */,
 				2BEB9E24253D7D1E0022A2A6 /* LCYSearchUserModel.m */,
 			);
-			path = SearchUserModel;
+			path = User;
 			sourceTree = "<group>";
 		};
 		2BEB9E30253EB95C0022A2A6 /* UserModel */ = {
@@ -385,7 +392,8 @@
 		2BEB9E36253ED9890022A2A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E5725412CD30022A2A6 /* HistoryRecordModel */,
+				2BEB9E5825412D190022A2A6 /* LCYHistoryRecordModel.h */,
+				2BEB9E5925412D190022A2A6 /* LCYHistoryRecordModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,102 +435,76 @@
 		2BEB9E3E253FDA8E0022A2A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E5B2541305C0022A2A6 /* HistoryRecordViewModel */,
+				2BEB9E5C2541308C0022A2A6 /* LCYHistoryRecordViewModel.h */,
+				2BEB9E5D2541308C0022A2A6 /* LCYHistoryRecordViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2BEB9E42253FEDCB0022A2A6 /* SearchUserCell */ = {
+		2BEB9E42253FEDCB0022A2A6 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E4625400F540022A2A6 /* LCYSearchUserCell.h */,
 				2BEB9E4725400F540022A2A6 /* LCYSearchUserCell.m */,
 			);
-			path = SearchUserCell;
+			path = User;
 			sourceTree = "<group>";
 		};
-		2BEB9E532540729F0022A2A6 /* HistoryCell */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB9E54254072C20022A2A6 /* LCYHistoryRecordCell.h */,
-				2BEB9E55254072C20022A2A6 /* LCYHistoryRecordCell.m */,
-			);
-			path = HistoryCell;
-			sourceTree = "<group>";
-		};
-		2BEB9E5725412CD30022A2A6 /* HistoryRecordModel */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB9E5825412D190022A2A6 /* LCYHistoryRecordModel.h */,
-				2BEB9E5925412D190022A2A6 /* LCYHistoryRecordModel.m */,
-			);
-			path = HistoryRecordModel;
-			sourceTree = "<group>";
-		};
-		2BEB9E5B2541305C0022A2A6 /* HistoryRecordViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB9E5C2541308C0022A2A6 /* LCYHistoryRecordViewModel.h */,
-				2BEB9E5D2541308C0022A2A6 /* LCYHistoryRecordViewModel.m */,
-			);
-			path = HistoryRecordViewModel;
-			sourceTree = "<group>";
-		};
-		2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCell */ = {
+		2BEB9E5F2541C7B90022A2A6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E602541C80D0022A2A6 /* LCYSearchOptionsCell.h */,
 				2BEB9E612541C80D0022A2A6 /* LCYSearchOptionsCell.m */,
 			);
-			path = SearchOptionsCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
-		2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */ = {
+		2BEB9E632542AB5D0022A2A6 /* UserViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E642542ABDD0022A2A6 /* LCYSearchUserViewController.h */,
 				2BEB9E652542ABDD0022A2A6 /* LCYSearchUserViewController.m */,
 			);
-			path = SearchUserViewController;
+			path = UserViewController;
 			sourceTree = "<group>";
 		};
-		2BEB9E672542C9CC0022A2A6 /* SearchUserViewModel */ = {
+		2BEB9E672542C9CC0022A2A6 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E3F253FDBC90022A2A6 /* LCYSearchUserViewModel.h */,
 				2BEB9E40253FDBC90022A2A6 /* LCYSearchUserViewModel.m */,
 			);
-			path = SearchUserViewModel;
+			path = User;
 			sourceTree = "<group>";
 		};
-		2BEB9E682542CA520022A2A6 /* SearchRepositoriesViewController */ = {
+		2BEB9E682542CA520022A2A6 /* RepositoriesViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E692542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.h */,
 				2BEB9E6A2542CA8A0022A2A6 /* LCYSearchRepositoriesViewController.m */,
 			);
-			path = SearchRepositoriesViewController;
+			path = RepositoriesViewController;
 			sourceTree = "<group>";
 		};
-		2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCell */ = {
+		2BEB9E6C2542CC230022A2A6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E6D2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.h */,
 				2BEB9E6E2542CD0F0022A2A6 /* LCYSearchRepositoriesCell.m */,
 			);
-			path = SearchRepositoriesCell;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
-		2BEB9E72254521260022A2A6 /* SearchRepositoriesViewModel */ = {
+		2BEB9E72254521260022A2A6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9E732545217A0022A2A6 /* LCYSearchRepositoriesViewModel.h */,
 				2BEB9E742545217A0022A2A6 /* LCYSearchRepositoriesViewModel.m */,
 			);
-			path = SearchRepositoriesViewModel;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
-		2BEB9EAE254571AF0022A2A6 /* SearchRepositoriesModel */ = {
+		2BEB9EAE254571AF0022A2A6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				2BEB9EB3254573280022A2A6 /* LCYSearchRepoModel.h */,
@@ -532,14 +514,7 @@
 				2BEB9EB6254573C20022A2A6 /* LCYSearchRepositoriesUserModel.h */,
 				2BEB9EB7254573C20022A2A6 /* LCYSearchRepositoriesUserModel.m */,
 			);
-			path = SearchRepositoriesModel;
-			sourceTree = "<group>";
-		};
-		2BEB9EB2254572800022A2A6 /* SearchModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchModel;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		2BEB9EC325470DEE0022A2A6 /* Module */ = {
@@ -565,8 +540,8 @@
 		2BEB9EC525470E290022A2A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E22253D7CA90022A2A6 /* SearchUserModel */,
-				2BEB9EAE254571AF0022A2A6 /* SearchRepositoriesModel */,
+				2BEB9E22253D7CA90022A2A6 /* User */,
+				2BEB9EAE254571AF0022A2A6 /* Repositories */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -574,8 +549,8 @@
 		2BEB9EC625470E510022A2A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E672542C9CC0022A2A6 /* SearchUserViewModel */,
-				2BEB9E72254521260022A2A6 /* SearchRepositoriesViewModel */,
+				2BEB9E672542C9CC0022A2A6 /* User */,
+				2BEB9E72254521260022A2A6 /* Repositories */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -603,7 +578,8 @@
 		2BEB9EC925470EDE0022A2A6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E532540729F0022A2A6 /* HistoryCell */,
+				2BEB9E54254072C20022A2A6 /* LCYHistoryRecordCell.h */,
+				2BEB9E55254072C20022A2A6 /* LCYHistoryRecordCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -611,8 +587,8 @@
 		2BEB9ECA25470EF90022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E632542AB5D0022A2A6 /* SearchUserViewController */,
-				2BEB9E682542CA520022A2A6 /* SearchRepositoriesViewController */,
+				2BEB9E632542AB5D0022A2A6 /* UserViewController */,
+				2BEB9E682542CA520022A2A6 /* RepositoriesViewController */,
 				2BEB9ECB25470F050022A2A6 /* Cell */,
 			);
 			path = View;
@@ -621,8 +597,8 @@
 		2BEB9ECB25470F050022A2A6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9E6C2542CC230022A2A6 /* SearchRepositoriesCell */,
-				2BEB9E42253FEDCB0022A2A6 /* SearchUserCell */,
+				2BEB9E6C2542CC230022A2A6 /* Repositories */,
+				2BEB9E42253FEDCB0022A2A6 /* User */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -637,18 +613,10 @@
 			path = SearchOption;
 			sourceTree = "<group>";
 		};
-		2BEB9ECD25470F490022A2A6 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB9E5F2541C7B90022A2A6 /* SearchOptionsCell */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		2BEB9ECE25470F5E0022A2A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB9ECD25470F490022A2A6 /* Cell */,
+				2BEB9E5F2541C7B90022A2A6 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";

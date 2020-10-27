@@ -10,9 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol LCYprotocolDelegate <NSObject>
+@protocol LCYSearchDelegate <NSObject>
 
-@required
 - (void) routeToViewController:(UIViewController *)vc;
 
 @end

@@ -13,7 +13,7 @@
 #import "LCYSearchRepositoriesViewController.h"
 #import "LCYSearchUserViewController.h"
 #import <WHToast.h>
-#import "LCYprotocolDelegate.h"
+#import "LCYSearchDelegate.h"
 
 @interface LCYSearchOptionView()
 

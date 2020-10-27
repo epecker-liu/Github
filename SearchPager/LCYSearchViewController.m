@@ -30,12 +30,8 @@
 
 @interface LCYSearchViewController ()
 
-//@property (nonatomic, strong) UITableView *searchTableView;
 @property (nonatomic, strong) UITextField *searchTextField;
-@property (nonatomic, strong) LCYSearchUserViewModel *searchViewModel;
 @property (nonatomic, strong) NSMutableArray *temp;
-@property (nonatomic, strong) LCYHistoryRecordViewModel *historyRecordViewModel;
-@property (nonatomic, strong) LCYHistoryRecordModel *historyRecordModel;
 @property (nonatomic, strong) LCYSearchOptionView *searchOptionsView;
 @property (nonatomic, strong) LCYHistoryRecordView *historyRecordView;
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -47,8 +43,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.searchViewModel = [[LCYSearchUserViewModel alloc] init];
-    self.historyRecordViewModel = [[LCYHistoryRecordViewModel alloc] init];
     [self initSearchPageUI];
     [self bindViewModel];
 }
@@ -72,8 +66,8 @@
             self.searchOptionsView.hidden = YES;
             return [UIColor yellowColor];
         } else {
+            [self.searchOptionsView updateSearchString:self.searchTextField.text];
             if (self.searchOptionsView.hidden == YES) {
-                [self.searchOptionsView updateSearchString:self.searchTextField.text];
                 self.historyRecordView.alpha = 1;
                 self.historyRecordView.transform = CGAffineTransformScale(self.historyRecordView.transform, 1, 1);
                 [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{

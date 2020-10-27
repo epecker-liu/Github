@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LCYprotocolDelegate.h"
+#import "LCYSearchDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LCYSearchViewController : UIViewController <LCYprotocolDelegate>
+@interface LCYSearchViewController : UIViewController <LCYSearchDelegate>
 
 @end
  

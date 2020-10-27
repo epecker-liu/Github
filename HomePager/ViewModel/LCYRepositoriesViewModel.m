@@ -9,8 +9,7 @@
 #import "LCYRepositoriesViewModel.h"
 #import "LCYFetchNetDataService.h"
 #import "LCYItemModel.h"
-
-static NSString *const kLCYRepoDataURL = @"https://api.github.com/users/epecker-liu/repos?access_token=b637fbc4c06bf2ff2bc7c9943ccfd17381f5ee4c";
+#import "LCYConstValue.h"
 
 @interface LCYRepositoriesViewModel()
 
